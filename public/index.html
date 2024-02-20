@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <link href="img/bar.png" rel="icon" type="image/png" />
+    <title>Decarbonization Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--
+Template 2110 Character
+http://www.tooplate.com/view/2110-character
+-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+    <!-- https://fonts.google.com/specimen/Open+Sans -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+        /* Importing a sophisticated font */
+        .fas {
+            cursor: pointer;
+            font-size: 1.5em;
+            transition: transform 0.3s;
+        }
+
+        .fas:hover {
+            color: #ddd;
+            /* Changez cette couleur si nécessaire */
+        }
+
+        .content {
+            transition: max-height 0.3s;
+            overflow: hidden;
+        }
+
+
+        .tm-hero-text {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            margin-top: 30px;
+            margin: 0;
+            border-left: 4px solid #f1f1f1;
+            letter-spacing: 1px;
+            width: 70%;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            text-align: justify;
+        }
+
+
+        .tm-block-brand {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            height: 0%;
+        }
+
+        .tm-bg-primary-dark {
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .fas.fa-braille {
+            margin-right: 15px;
+            font-size: 2em;
+            color: #fff;
+        }
+
+        .tm-brand-name {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 1.3em;
+            letter-spacing: 1px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+
+        /* En-tête */
+        .tm-text-uppercase {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .fas {
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: transform 0.3s;
+            margin-top: 15px;
+        }
+
+        .fas:hover {
+            color: #ddd;
+        }
+
+        /* Contenu */
+        .content h3 {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 20px 0 10px;
+            font-weight: 500;
+            font-size: 1.1em;
+        }
+
+        .content p {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.5;
+            font-size: 0.95em;
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: rgba(255, 255, 255, 0.95);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .navbar.scrolled {
+            transform: scale(0.95);
+        }
+
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 700;
+            transition: transform 0.3s, color 0.3s, margin-top 0.3s;
+            display: inline-block;
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Gill Sans", "Gill Sans MT", Arial, sans-serif;
+            letter-spacing: 2px;
+            font-size: small;
+        }
+
+        .navbar a:hover {
+            transform: translateY(-5px);
+            /* Slight upward movement */
+            color: #555;
+        }
+
+        .navbar-logo img {
+            height: 70px;
+            margin-right: 15px;
+            transition: transform 0.3s;
+        }
+
+        .navbar.scrolled .navbar-logo img {
+            transform: scale(0.85);
+        }
+
+
+        .hero {
+            background-image: url('img/111.jpeg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 130px 0;
+            margin-top: 0%;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 56px;
+            margin-bottom: 80px;
+            margin-top: 80px;
+            color: #f6f5f5;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 5px #00000088, -2px -2px 5px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .cta-button {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            display: inline-block;
+            background-color: #dedfdfe2;
+            color: #000000;
+            font-size: 20px;
+            padding: 0;
+            text-decoration: none;
+            border-radius: 30px;
+            width: 30%;
+            margin-bottom: 0%;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+        /* Importing a sophisticated font */
+
+        .letter-container {
+            background-color: #ffffff;
+            padding: 10px 20px;
+            width: 80%;
+            margin: 10px auto;
+            font-family: 'Lora', serif;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.185);
+            border-radius: 0px;
+            max-width: 1100px;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            background-image: url('https://www.toptal.com/designers/subtlepatterns/paper.png');
+            background-repeat: repeat;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(245, 245, 245, 0.9)), url('https://www.toptal.com/designers/subtlepatterns/paper.png');
+
+        }
+
+        .letter-container h2 {
+            color: #1a1a1a;
+            margin-bottom: 35px;
+            font-size: 32px;
+            font-weight: 600;
+            border-bottom: 2px solid #d6d6d600;
+            padding-bottom: 18px;
+            text-transform: none;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .letter-container p {
+            color: #3e3e3e;
+            line-height: 1.9;
+            font-size: 16px;
+            margin-bottom: 28px;
+            text-align: justify;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-weight: 400;
+            color: #000000;
+            width: 90%;
+            text-align: justify;
+            margin-left: 5%;
+            letter-spacing: 1px;
+        }
+
+        #transition-quote {
+            text-align: center;
+            font-style: italic;
+            padding: 50px 0;
+            font-size: 1.2em;
+        }
+
+        #transition-quote {
+            text-align: center;
+            font-style: italic;
+            border-top: 1px solid #dddddd00;
+            border-bottom: 1px solid #dddddd00;
+            margin: 50px 0;
+        }
+
+        a {
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        a:hover {
+            color: #555;
+        }
+
+        .btn {
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+                /* Slight movement from below */
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeIn 1s forwards;
+            opacity: 0;
+        }
+    </style>
+    <script>
+        // JavaScript for adjusting navbar on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 10) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <style>
+        .navbar.scrolled {
+            transform: scale(0.9);
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+
+        .navbar.scrolled a,
+        .navbar.scrolled label {
+            opacity: 0.8;
+            font-weight: 700;
+        }
+
+        .animated-arrow {
+            display: inline-block;
+            margin-left: 10px;
+            /* space between title and arrow */
+            font-size: 24px;
+            animation: bounceArrow 0.7s infinite alternate;
+        }
+
+        @keyframes bounceArrow {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(5px);
+            }
+        }
+    </style>
+
+</head>
+<div class="navbar">
+    <div class="navbar-logo">
+        <a href="/home">
+            <img alt="Logo" src="img/logoo.png" />
+        </a>
+    </div>
+    <div>
+        <a href="/home">
+            Home
+        </a>
+        <a href="/signin">
+            Sign In
+        </a>
+        <a href="/emission">
+            Emissions
+        </a>
+        <a href="/energy">
+            Efficiency
+        </a>
+        <a href="/hydro">
+            Try Demo
+        </a>
+        <a href="/history">
+            User
+        </a>
+        <a id="logout-link">
+            Logout
+        </a>
+    </div>
+</div>
+<div>
+
+    <section class="hero">
+        <h1>
+            'We have to think hydrogen from end-to-end'
+        </h1>
+        <a class="cta-button" href="#app"
+            style="margin-right: 1%; padding: 10px 10px;     background-color: #dedfdff8;">
+            Get Your Questions Answered
+        </a>
+        <a class="cta-button" href="/hydrogenone"
+            style="margin-left: 1%; padding: 10px 10px; width: 23%;     background-color: #dedfdf88;">
+            Try Hydrogen Calcuator
+        </a>
+
+    </section>
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <div class="letter-container">
+        <h2>
+            Path to Reduced Emissions
+        </h2>
+        <p>
+            As global momentum shifts towards reducing carbon emissions, traditional power generation is evolving. While
+            renewables surge ahead, hydrogen-integrated feed gas stands out as a parallel solution. APO's advanced
+            platform showcases this transformation. Discover how we're at the forefront of this revolution.
+        </p>
+        <a class="cta-button" href="#app"
+            style="margin-left: 80%; padding: 10px 10px; width: 23%; background-color: #dedfdf88; border-radius: 2px; font-size: small; font-weight: 500;">
+            View Details
+        </a>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="decarbonizationChart"></canvas>
+    </div>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #ccc;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 80%;
+            margin: auto;
+            height: 400px;
+            background-color: #01092c;
+            /* Dark Blue background color */
+            border-radius: 10px;
+            /* Rounded corners */
+            padding: 20px;
+            /* Some padding inside the container */
+        }
+    </style>
+    <script>
+        const ctx = document.getElementById('decarbonizationChart').getContext('2d');
+
+        // Define a plugin to draw the arrows
+        const arrowPlugin = {
+            id: 'arrowPlugin',
+            afterDatasetsDraw: function (chart, args, options) {
+                const ctx = chart.ctx;
+                const datasets = chart.data.datasets;
+                const xAxis = chart.scales['x'];
+                const yAxis = chart.scales['y'];
+
+                const highestEmission = Math.max(...datasets[0].data);
+
+                ctx.save();
+                ctx.fillStyle = options.arrowColor;
+                datasets.forEach((dataset, index) => {
+                    dataset.data.forEach((value, dataIndex) => {
+                        if (dataIndex === 0) return;
+
+                        const x = xAxis.getPixelForValue(chart.data.labels[dataIndex]);
+                        const y = yAxis.getPixelForValue(highestEmission);
+                        const arrowSize = 45;
+
+                        // Calculate the endY for the arrow body
+                        const endY = yAxis.getPixelForValue(value) - arrowSize - 3; // Adjusted for arrowhead separation
+
+                        ctx.beginPath();
+                        ctx.moveTo(x, y);
+                        ctx.lineTo(x, endY);
+                        ctx.lineWidth = 20;
+                        ctx.strokeStyle = options.arrowColor;
+                        ctx.stroke();
+
+                        ctx.beginPath();
+                        ctx.moveTo(x, endY + arrowSize); // Position of the arrowhead
+                        ctx.lineTo(x - arrowSize / 2, endY);
+                        ctx.lineTo(x + arrowSize / 2, endY);
+                        ctx.closePath();
+                        ctx.fill();
+                    });
+                });
+                ctx.restore();
+            }
+        };
+
+        Chart.register(arrowPlugin);
+
+        const data = {
+            labels: [
+                "GAS: Global Average",
+                "70% Natural Gas",
+                "50% Natural Gas",
+                "30% Natural Gas",
+                "10% Natural Gas",
+                "0% Natural Gas"
+            ],
+            datasets: [{
+                label: 'CARBON EMISSIONS INTENSITY (Gt CO2/year)',
+                data: [7, 5.425, 4.375, 3.343, 1.275, 0],
+                backgroundColor: ["#F0F0F0", "#1E7BA8", "#1E7BA8", "#1E7BA8", "#4DA0C5", "#8AC6E1"],
+                borderRadius: 5,
+                barPercentage: 0.6
+            }]
+        };
+
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+
+
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: "#FFFFFF"   /* Set y-axis label color to white */
+                        },
+                        grid: {
+                            drawBorder: false,
+                            color: function (context) {
+                                return context.tick.value === 0 ? 'transparent' : '#B0C7D1';
+                            }
+                        }
+                    },
+                    x: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: "#FFFFFF"   /* Set y-axis label color to white */
+                        },
+                        grid: {
+                            display: false
+
+
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#FFFFFF',  // This sets the color of the dataset label to white
+
+                            font: {
+                                size: 16, // Adjust as per your requirement
+                                family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                                weight: '500'
+                            }
+                        },
+                    },
+                    arrowPlugin: {
+                        arrowColor: "#AEDFF7"
+                    }
+                },
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        };
+
+        const decarbonizationChart = new Chart(ctx, config);
+    </script>
+
+
+    <body class="tm-bg-dark" style="padding: 0%; background-color: #66666623;">
+        <main id="app" class="tm-container masonry" style="padding: 0%;">
+            <div class="item tm-bg-white tm-block tm-block-left" data-desktop-seq-no="1" data-mobile-seq-no="1">
+                <h3 style="margin-left: 30px; margin-bottom: 0%; background-color: #dddddd00;">Economic Implications
+                </h3>
+                <p class="tm-hero-text">In response to escalating global regulatory pressures and the looming prospect
+                    of carbon pricing or penalties, proactive emission reductions are essential, leading to substantial
+                    economic benefits. The integration of hydrogen technology stands as a key mitigation strategy.</p>
+                <h3 style="margin-left: 30px; margin-bottom: 0%; background-color: #dddddd00;">Operational
+                    Considerations</h3>
+                <p class="tm-hero-text" style="margin-bottom: 0%;">Integrating hydrogen into natural gas for internal
+                    use introduces specific
+                    Although hydrogen's reduced energy density influences the blend's calorific value, optimized
+                    combustion procedures can mitigate the risk of elevated NOx emissions at peak temperatures. The task
+                    is to pinpoint the ideal blend that harmonizes emission reduction targets with operational prowess.
+                </p>
+                <header class="tm-block-brand">
+                    <div class="tm-bg-primary-dark tm-text-white tm-block-brand-inner">
+                        <i class="fas fa-braille fa-3x"></i>
+                        <h1 class="tm-brand-name" style="margin-top: 0px;">Why Hydrogen?</h1>
+                    </div>
+                </header>
+            </div>
+            <div class="item" data-desktop-seq-no="2" data-mobile-seq-no="4">
+                <img src="img/b231daad-2874-43f0-8341-c1caea3449f8.jpeg" alt="Image" class="tm-img-left">
+
+            </div>
+
+            <div class="item tm-bg-secondary tm-text-white tm-block tm-block-wider tm-block-pad tm-block-left-2"
+                data-desktop-seq-no="3" data-mobile-seq-no="5">
+                <div class="header-section"
+                    style="cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                    <h2>SAFETY & INFRASTRUCTURE <span class="animated-arrow">&rarr;</span></h2>
+                    <span style="font-size: 24px; font-weight: 400;"></span>
+                </div>
+            </div>
+
+
+
+            <script>
+                document.querySelector('.header-section').addEventListener('click', function () {
+                    const content = document.querySelector('.content-section');
+                    if (content.style.display === 'none') {
+                        content.style.display = 'block';
+                    } else {
+                        content.style.display = 'none';
+                    }
+                });
+            </script>
+
+            <div class="item" data-desktop-seq-no="4" data-mobile-seq-no="8">
+                <img src="img/Untitled-design-2022-12-09T152355.165-1024x576.png" alt="Image" class="tm-img-left">
+            </div>
+            <div class="tm-footer" id="tmFooter" data-desktop-seq-no="5" data-mobile-seq-no="9">
+
+                <div>
+                    <p class="tm-mb-small"> </p>
+                    <p><a rel="nofollow" href="https://www.facebook.com/tooplate"></a></p>
+                </div>
+            </div>
+            <div class="item" data-desktop-seq-no="6" data-mobile-seq-no="2">
+                <img src="img/3s.avif" alt="Image">
+            </div>
+            <div class="item tm-block-right" data-desktop-seq-no="7" data-mobile-seq-no="3">
+                <div
+                    class="tm-block-right-inner tm-bg-primary-light tm-text-white tm-block tm-block-wider tm-block-pad">
+                    <header>
+                        <h2 class="tm-text-uppercase">
+                            The Environmental Imperative
+                        </h2>
+                        <i class="fas fa-chevron-down" id="toggleContent"></i>
+                    </header>
+                    <!-- Contenu caché -->
+                    <div class="content" style="display: none;">
+                        <h3>Emission Reduction</h3>
+                        <p>As industry leaders, you're well-aware of the emission profile associated with natural gas
+                            combustion. Hydrogen presents a direct solution to this challenge. With its clean combustion
+                            properties, resulting in water as the sole byproduct, blending hydrogen with natural gas can
+                            substantially lower the carbon intensity of the combustion process.</p>
+
+                        <h3>Sustainability Goals</h3>
+                        <p>The industry's commitment to driving sustainability and modernizing operations is evident.
+                            Embracing hydrogen integration is a continuation of this commitment, aligning with global
+                            energy transition trends and reinforcing the industry's position at the forefront of
+                            innovative energy solutions.</p>
+
+                        <h3>Regulatory Compliance</h3>
+                        <p>Staying ahead of regulatory shifts is a hallmark of an adaptive industry. As environmental
+                            regulations evolve, integrating hydrogen provides an avenue to not only meet but exceed
+                            these standards. Such proactive measures fortify the industry's reputation for environmental
+                            stewardship and ensure a resilient future.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="item" data-desktop-seq-no="8" data-mobile-seq-no="6">
+                <img src="img/1665719066097.jpg" alt="Image">
+            </div>
+            <div class="item tm-bg-white tm-block tm-form-section" data-desktop-seq-no="9" data-mobile-seq-no="7">
+                <div class="tm-form-container tm-block-pad tm-pb-0">
+                    <header>
+                        <h2 class="tm-text-uppercase tm-mb"
+                            style="color: #333; padding-bottom: 10px; margin-bottom: 20px;">
+                            The Science Behind It
+                        </h2>
+                    </header>
+                    <p
+                        style="color: #212121; line-height: 1.6; font-size: 16px; text-align: justify; letter-spacing: 1px;">
+                        At its core, the science is straightforward: hydrogen
+                        combustion produces water vapor, unlike carbon-rich fuels that emit carbon dioxide. This
+                        fundamental difference means that blending hydrogen with natural gas intrinsically reduces the
+                        carbon content of the resultant feed.
+                    </p>
+                    <p
+                        style="color: #212121; line-height: 1.6; font-size: 16px; text-align: justify; margin-top: 15px; letter-spacing: 1px;">
+                        However, while the carbon emission benefits are evident, it's crucial to address the potential
+                        for nitrogen oxides (NOx) formation during hydrogen combustion at elevated temperatures. Such
+                        challenges, while notable, can be managed with advanced combustion techniques and continuous
+                        monitoring.
+                    </p>
+                    <p
+                        style="color: #212121; line-height: 1.6; font-size: 16px; text-align: justify; margin-top: 15px;letter-spacing: 1px;">
+                        The industry's commitment to understanding and navigating these scientific nuances underscores
+                        its dedication to pioneering sustainable solutions.
+                    </p>
+
+                </div>
+
+
+                <div class="tm-form-section-tag">
+                    <div class="tm-bg-secondary tm-text-white tm-block-pad tm-form-section-tag-inner">
+                        <div class="qa-item">
+                            <button class="question-btn" onclick="toggleAnswer('answer1')">Q: What safety considerations
+                                arise with the introduction of hydrogen? </button>
+                            <p id="answer1" class="answer" style="display:none;">
+                                A: Hydrogen possesses unique properties, like a broad flammability range and low
+                                ignition energy, which mandate specialized safety measures. Additionally, when combusted
+                                at high temperatures, hydrogen can lead to increased NOx emissions. These factors
+                                highlight the need for tailored safety protocols when considering hydrogen integration.
+                            </p>
+                        </div>
+                        <div class="qa-item">
+                            <button class="question-btn" onclick="toggleAnswer('answer2')">Q: How might our existing
+                                infrastructure need to adapt for hydrogen? </button>
+                            <p id="answer2" class="answer" style="display:none;">
+                                A: Hydrogen's smaller molecular size poses challenges like potential leakage. As such,
+                                parts of the existing infrastructure, from pipelines to storage, might require
+                                modifications or enhancements to ensure they are hydrogen-ready.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="letter-container">
+                        <h2 style="color: #ffffff00;">
+                            Path to Reduced Emissions
+                        </h2>
+                        <p>
+                        <p style="margin-bottom: 10px;">
+                            As a distinguished stakeholder in the APO natural gas industry, your insights and strategic
+                            decisions play an instrumental role in shaping the evolution of power generation. As we
+                            pivot to a landscape where hydrogen integration coexists seamlessly with renewables, APO
+                            remains steadfast in its commitment to ensuring our industry is at the forefront of
+                            innovation & excellence.
+                       
+                        <a class="cta-button" href="/hydrogenone"
+                            style="margin-left: 80%; padding: 10px 10px; width: 23%; background-color: #dedfdf88; border-radius: 2px; font-size: small; font-weight: 500;">
+                            Try Demo
+                        </a>
+                    </div>
+                </div>
+
+                <style>
+                    .question-btn {
+                        display: block;
+                        background-color: transparent;
+                        border: none;
+                        color: white;
+                        text-align: left;
+                        width: 120%;
+                        margin-left: -40px;
+                        cursor: pointer;
+                        font-weight: 500;
+                        transition: background-color 0.3s;
+                        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+                        letter-spacing: 1.3px;
+                        font-size: 14px;
+                        margin-bottom: 20px;
+                    }
+
+                    .question-btn:hover {
+                        background-color: rgba(255, 255, 255, 0.1);
+                    }
+
+                    .answer {
+                        padding: 10px 0;
+                        color: #ffffff;
+                        border-top: 1px solid rgba(255, 255, 255, 0.2);
+                        margin-top: 10px;
+                        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+                        letter-spacing: 1.5px;
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                </style>
+
+                <script>
+                    function toggleAnswer(answerId) {
+                        var answer = document.getElementById(answerId);
+                        if (answer.style.display === "none") {
+                            answer.style.display = "block";
+                        } else {
+                            answer.style.display = "none";
+                        }
+                    }
+                </script>
+
+        </main>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <!-- https://jquery.com/download/ -->
+        <script>
+
+            let callAdjustLayout;
+            let currentLayout = "desktop",
+                nextLayout = "desktop";
+
+            /**
+             * detect IE
+             * returns version of IE or false, if browser is not Internet Explorer
+             */
+            function detectIE() {
+                var ua = window.navigator.userAgent;
+
+                var msie = ua.indexOf('MSIE ');
+                if (msie > 0) {
+                    // IE 10 or older => return version number
+                    return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+                }
+
+                var trident = ua.indexOf('Trident/');
+                if (trident > 0) {
+                    // IE 11 => return version number
+                    var rv = ua.indexOf('rv:');
+                    return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+                }
+
+                var edge = ua.indexOf('Edge/');
+                if (edge > 0) {
+                    // Edge (IE 12+) => return version number
+                    return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+                }
+
+                // other browser
+                return false;
+            }
+
+            // Adjust layout based on the browser width
+            function adjustLayout() {
+                let block1, block2, block3, block4, block5, block6, block7, block8, block9;
+
+                if (window.innerWidth <= 1199) {
+                    // Mobile layout
+                    nextLayout = "mobile";
+                    block1 = $("div[data-mobile-seq-no='1']");
+                    block2 = $("div[data-mobile-seq-no='2']");
+                    block3 = $("div[data-mobile-seq-no='3']");
+                    block4 = $("div[data-mobile-seq-no='4']");
+                    block5 = $("div[data-mobile-seq-no='5']");
+                    block6 = $("div[data-mobile-seq-no='6']");
+                    block7 = $("div[data-mobile-seq-no='7']");
+                    block8 = $("div[data-mobile-seq-no='8']");
+                    block9 = $("div[data-mobile-seq-no='9']");
+                } else {
+                    // Desktop layout
+                    nextLayout = "desktop";
+                    block1 = $("div[data-desktop-seq-no='1']");
+                    block2 = $("div[data-desktop-seq-no='2']");
+                    block3 = $("div[data-desktop-seq-no='3']");
+                    block4 = $("div[data-desktop-seq-no='4']");
+                    block5 = $("div[data-desktop-seq-no='5']");
+                    block6 = $("div[data-desktop-seq-no='6']");
+                    block7 = $("div[data-desktop-seq-no='7']");
+                    block8 = $("div[data-desktop-seq-no='8']");
+                    block9 = $("div[data-desktop-seq-no='9']");
+                }
+
+                if (nextLayout !== currentLayout) {
+                    // Reorder blocks based on their seq no
+                    block1.after(block2.detach());
+                    block2.after(block3.detach());
+                    block3.after(block4.detach());
+                    block4.after(block5.detach());
+                    block5.after(block6.detach());
+                    block6.after(block7.detach());
+                    block7.after(block8.detach());
+                    block8.after(block9.detach());
+                    currentLayout = nextLayout;
+                }
+            }
+
+            // Adjust layout upon window resize
+            window.onresize = function () {
+                clearTimeout(callAdjustLayout);
+                callAdjustLayout = setTimeout(adjustLayout, 100);
+            }
+
+            // DOM is ready
+            $(function () {
+                if (detectIE()) {
+                    alert('Please use the latest version of Chrome or Firefox for best browsing experience.');
+                }
+
+                adjustLayout();
+            })
+        </script>
+        <script>document.getElementById("toggleContent").addEventListener("click", function () {
+                var content = document.querySelector(".content");
+                if (content.style.display === "none") {
+                    content.style.display = "block";
+                } else {
+                    content.style.display = "none";
+                }
+            });
+
+        </script>
+
+        <div class="chat-bubble">
+            <div class="chat-icon">
+                🗨️
+            </div>
+            <div class="chat-content" style="display: none;">
+                <p class="welcome-msg">Welcome!. How can I assist you?</p>
+                <ul class="questions-list">
+                    <li>What is the contact for your website?</li>
+                    <li>Where are you located?</li>
+                    <li>What services do you offer?</li>
+                    <li>Other questions...</li>
+                </ul>
+                <div class="evaluation" style="display: none;">
+                    <p>Thank you! Rate Our chat :</p>
+                    <span class="star" data-value="1">☆</span>
+                    <span class="star" data-value="2">☆</span>
+                    <span class="star" data-value="3">☆</span>
+                    <span class="star" data-value="4">☆</span>
+                    <span class="star" data-value="5">☆</span>
+                </div>
+            </div>
+        </div>
+
+        <script>$(document).ready(function () {
+                $('.chat-bubble').on('click', function () {
+                    if (!$('.chat-content').is(':visible')) {
+                        $('.chat-content').fadeIn();
+                        return;
+                    }
+
+                    if ($('.evaluation').is(':visible')) {
+                        return;
+                    }
+
+                    if ($('.welcome-msg').text() !== 'Réflexion...') {
+                        $('.chat-content').fadeOut();
+                    }
+                });
+
+                function resetChat() {
+                    $('.welcome-msg').text('Bienvenue à notre société. Comment pouvons-nous vous aider?');
+                    $('.questions-list').show();
+                    $('.evaluation').hide();
+                    $('.star').removeClass('active');
+                }
+
+                $('.questions-list li').on('click', function () {
+                    var question = $(this).text();
+                    var response = "";
+
+                    $('.questions-list').hide();
+                    $('.welcome-msg').text('Réflexion...');
+
+                    setTimeout(function () {
+                        switch (question) {
+                            case 'What is the contact for your website?':
+                                response = "You can contact us at contact@mysite.com";
+                                break;
+                            case 'Where are you located?':
+                                response = "We are located in Paris, France.";
+                                break;
+                            case 'What services do you offer?':
+                                response = "We offer web, design, and marketing services.";
+                                break;
+                            case 'Other questions...':
+                                response = "If you have any further questions, please contact our service at +1234567890. Thank you!";
+                                break;
+                        }
+                        $('.welcome-msg').text(response);
+                        $('.evaluation').fadeIn();
+                    }, 2000);
+                });
+
+                $('.star').on('click', function () {
+                    let value = $(this).data('value');
+                    $('.star').slice(0, value).addClass('active');
+                    setTimeout(function () {
+                        resetChat();
+                    }, 1500);
+                });
+            });
+
+        </script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            .chat-bubble {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                border-radius: 50%;
+                background-color: #f0f0f0;
+                /* Couleur de fond de la bulle */
+                color: black;
+                /* Couleur de l'icône */
+                cursor: pointer;
+                transition: background 0.3s;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+                /* Ombre légère pour la bulle */
+            }
+
+            .chat-icon {
+                font-size: 24px;
+            }
+
+            .chat-content {
+                position: absolute;
+                bottom: 70px;
+                right: 20px;
+                width: 250px;
+                background-color: #fff;
+                border-radius: 15px;
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+                padding: 15px;
+                display: none;
+                color: black;
+                /* Couleur du texte */
+            }
+
+            .chat-content ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .chat-content ul li {
+                padding: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                color: black;
+                /* Couleur du texte */
+            }
+
+            .chat-content ul li:hover {
+                background-color: #f8f9fa;
+            }
+
+            .input-area {
+                margin-top: 10px;
+            }
+
+            .input-area input {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .star {
+                cursor: pointer;
+                font-size: 1.5em;
+                color: #CCCCCC;
+                /* Couleur par défaut des étoiles */
+            }
+
+            .star.active {
+                color: gold;
+                /* Couleur des étoiles actives */
+            }
+
+            .welcome-msg {
+                font-weight: bold;
+                font-size: 18px;
+                margin-bottom: 10px;
+                color: #555;
+                /* Une couleur gris foncé pour un texte de bienvenue élégant */
+            }
+
+            .questions-list {
+                border: 1px solid #e5e5e5;
+            }
+        </style>
+    </body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="img/bar.png" rel="icon" type="image/png" />
+    <title>Verify Token</title>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('load', function () {
+            const token = localStorage.getItem('token');
+
+            fetch('http://localhost:5000/verify', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ token }),
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Token verification failed');
+                    }
+                    console.log("Token verified successfully");
+                    // After verification, send a request to get the history page content
+
+                    return fetch('http://localhost:5000/history', {
+                        headers: {
+                            'Authorization': 'Bearer ' + token
+                        }
+                    });
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to access history page');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    // Load the history page content
+                    window.location.href = '/home';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    window.location.href = '/signin';  // Redirect to login page if there's an error
+                });
+        });
+
+
+
+    </script>
+</body>
+
+</html>

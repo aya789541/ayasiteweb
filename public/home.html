@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet prefetch" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet prefetch" />
+    <link href="css/style.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="img/bar.png" rel="icon" type="image/png" />
+    <title>
+        APOcore
+    </title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: rgba(255, 255, 255, 0.95);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .navbar.scrolled {
+            transform: scale(0.95);
+        }
+
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 700;
+            transition: transform 0.3s, color 0.3s, margin-top 0.3s;
+            display: inline-block;
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Gill Sans", "Gill Sans MT", Arial, sans-serif;
+            letter-spacing: 2px;
+            font-size: small;
+        }
+
+        .navbar a:hover {
+            transform: translateY(-5px);
+            /* Slight upward movement */
+            color: #555;
+        }
+
+        .navbar-logo img {
+            height: 70px;
+            margin-right: 15px;
+            transition: transform 0.3s;
+        }
+
+        .navbar.scrolled .navbar-logo img {
+            transform: scale(0.85);
+        }
+
+
+        .hero {
+            background-image: url('img/1.avif');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 230px 0;
+            margin-top: 0%;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #008000;
+            color: #fff;
+            font-size: 20px;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+        /* Importing a sophisticated font */
+
+        .letter-container {
+            background-color: #ffffff;
+            padding: 60px 80px;
+            width: 80%;
+            margin: 60px auto;
+            font-family: 'Lora', serif;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.185);
+            border-radius: 15px;
+            max-width: 1100px;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            background-image: url('https://www.toptal.com/designers/subtlepatterns/paper.png');
+            background-repeat: repeat;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(245, 245, 245, 0.9)), url('https://www.toptal.com/designers/subtlepatterns/paper.png');
+
+        }
+
+        .letter-container h2 {
+            color: #1a1a1a;
+            margin-bottom: 35px;
+            font-size: 32px;
+            font-weight: 600;
+            border-bottom: 2px solid #d6d6d600;
+            padding-bottom: 18px;
+            text-transform: none;
+            letter-spacing: normal;
+        }
+
+        .letter-container p {
+            color: #3e3e3e;
+            line-height: 1.9;
+            font-size: 21px;
+            margin-bottom: 28px;
+            text-align: justify;
+            text-indent: 45px;
+        }
+
+        #transition-quote {
+            text-align: center;
+            font-style: italic;
+            padding: 50px 0;
+            font-size: 1.2em;
+        }
+
+        #transition-quote {
+            text-align: center;
+            font-style: italic;
+            border-top: 1px solid #dddddd00;
+            border-bottom: 1px solid #dddddd00;
+            margin: 50px 0;
+        }
+
+        a {
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        a:hover {
+            color: #555;
+        }
+
+        .btn {
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+                /* Slight movement from below */
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeIn 1s forwards;
+            opacity: 0;
+        }
+    </style>
+    <script>
+        // JavaScript for adjusting navbar on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 10) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <style>
+        .navbar.scrolled {
+            transform: scale(0.9);
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+
+        .navbar.scrolled a,
+        .navbar.scrolled label {
+            opacity: 0.8;
+            font-weight: 700;
+        }
+    </style>
+    <style>
+        #references {
+            padding: 20px 70px;
+            background-color: #ffffff;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+
+        #references h2 {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+            letter-spacing: 2px;
+            font-family: 'Lora', serif;
+        }
+
+        #references p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 20px 0;
+            letter-spacing: 0.9px;
+        }
+
+        #references ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #references li {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        #references li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+            line-height: 1;
+            color: #333;
+        }
+
+        #references a {
+            color: #007BFF;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        #references a:hover {
+            text-decoration: underline;
+        }
+
+        .cont {
+            max-width: 960px;
+            padding: 0 6em 3em;
+        }
+
+        /* Featured Image CSS */
+        .diagonal {
+            position: relative;
+            width: 100%;
+            background: url("img/2s.avif") no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            height: 52vh;
+            justify-content: center;
+        }
+
+        .diagonal:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(rgba(255, 255, 255, 0.17), rgba(253, 253, 253, 0.362), rgba(253, 253, 253, 0.537));
+
+        }
+
+        .diagonal:after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            bottom: -1px;
+            border-left-color: #f9f9f9;
+
+            border-left-style: solid;
+            border-left-width: calc(100vw + 10px);
+            border-top: 12vw solid transparent;
+        }
+
+        .diagonal h1 {
+            color: #fff;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin-top: -1em;
+        }
+
+        /* Blockquote CSS */
+        blockquote {
+            border-left: 3px solid #00cd8f;
+            color: #1a1a1a;
+            font-family: Georgia, Times, "Times New Roman", serif;
+            font-size: 1.25em;
+            font-style: italic;
+            line-height: 1.8em;
+            margin: 1.1em -4em;
+            padding: 1em 2em;
+            position: relative;
+            transition: .2s border ease-in-out;
+            z-index: 0;
+        }
+
+        blockquote:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -4px;
+            height: 2em;
+            background-color: #fff;
+            width: 5px;
+            margin-top: -1em;
+        }
+
+        blockquote:after {
+            content: "\f35f";
+            position: absolute;
+            top: 50%;
+            left: -0.5em;
+            color: #00CC8F;
+            font-family: "Ionicons";
+            font-style: normal;
+            line-height: 1em;
+            text-align: center;
+            text-indent: -2px;
+            width: 1em;
+            margin-top: -0.5em;
+            transition: .2s all ease-in-out, .4s transform ease-in-out;
+        }
+
+        blockquote.format:before,
+        blockquote.format:after {
+            display: none;
+        }
+
+        blockquote.book:after {
+            content: "\f12e";
+        }
+
+        blockquote.podcast:after {
+            content: "\f32d";
+        }
+
+        blockquote.lyrics:after {
+            content: "\f333";
+        }
+
+        blockquote.favorite:after {
+            content: "\f384";
+        }
+
+        blockquote:active:after {
+            transform: rotateY(360deg);
+        }
+
+        blockquote cite {
+            display: block;
+            font-size: 0.75em;
+            line-height: 1.8em;
+            margin-top: 1em;
+        }
+
+        /* Media Queries */
+
+        @media (max-width: 980px) {
+
+            .cont {
+                max-width: 720px;
+                padding: 0 3em 3em;
+            }
+
+            blockquote {
+                font-size: 1.1em;
+                margin: 1.1em -2em;
+            }
+        }
+
+        @media (max-width: 767px) {
+
+            .cont {
+                padding: 0 2em 3em;
+            }
+
+            blockquote {
+                border-top: 2px solid #00CC8F;
+                border-bottom: 2px solid #00CC8F;
+                border-left: none;
+                margin: 1.5em 0;
+                padding: 1.5em 1em;
+            }
+
+            blockquote:before {
+                left: 50%;
+                top: 0;
+                height: 4px;
+                margin-top: -3px;
+                margin-left: -1em;
+                width: 2em;
+            }
+
+            blockquote:after {
+                font-size: 0.75em;
+                left: 50%;
+                top: 0;
+                margin-top: -0.5em;
+                margin-left: -0.5em;
+            }
+
+            blockquote cite {
+                text-align: right;
+            }
+        }
+
+        .bg-black {
+            background-color: #a9a9a92a !important;
+        }
+
+        .py-3 {
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
+        }
+
+        .w-100 {
+            width: 100% !important;
+        }
+
+        .col-12 {
+            flex: 0 0 auto;
+            width: 100%;
+        }
+
+        .text-light {
+            color: #000000b7 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <a href="/home">
+                <img alt="Logo" src="img/logoo.png" />
+            </a>
+        </div>
+        <div>
+            <a href="/home">
+                Home
+            </a>
+
+            <a href="/emission">
+                Emissions
+            </a>
+            <a href="/energy">
+                Efficiency
+            </a>
+            <a href="/hydro">
+                Try Demo
+            </a>
+            <a href="/history">
+                User
+            </a>
+            <a href="/signin">
+                Sign In
+            </a>
+            <a id="logout-link">
+                sign out
+            </a>
+        </div>
+    </div>
+    <div>
+
+        <section class="hero">
+            <h1>
+                ApoCore: A New Dawn in Natural Gas Sustainability
+            </h1>
+            <p>
+                Where Industry Meets Nature's Standard
+            </p>
+            <a class="cta-button" href="#app">
+                Learn More
+            </a>
+
+        </section>
+    </div>
+    <div class="letter-container">
+        <h2>
+            Why ApoCore?
+        </h2>
+        <p>
+            At the heart of every mission lies a story, a narrative that defines its essence. "ApoCore" is not just a
+            name; it's a reflection of our deeply rooted values and mission. The prefix "Apo" firmly grounds us in our
+            industry, establishing both identity and tradition. Meanwhile, "Core" signifies more than just the center;
+            it represents the foundational principles that drive us. Our commitment to the environment isn't a mere
+            facet of our operations—it's central, it's integral, it's at our very core.
+        </p>
+        <p>
+            In a rapidly evolving natural gas industry, "ApoCore" embodies our pioneering spirit and unwavering
+            dedication to a sustainable future. It's a name that resonates with both our contemporary ambitions and
+            timeless values, serving as a testament to our role as leaders in this transformative era.
+        </p>
+    </div>
+
+    <script>
+
+        const logoutLink = document.getElementById("logout-link");
+
+
+        logoutLink.addEventListener("click", () => {
+            window.location.href = "/logout";
+        });
+    </script>
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <div class="wrapper" id="app" v-bind:class="{'is-previous': isPreviousSlide, 'first-load': isFirstLoad}" v-cloak="">
+        <div class="slide-wrapper" v-bind:class="{ active: index === currentSlide }"
+            v-bind:style="{ 'z-index': (slides.length - index), 'background-image': 'url(' + slide.bgImg + ')' }"
+            v-for="(slide, index) in slides">
+            <div class="slide-inner">
+                <div class="slide-bg-text">
+                    <p>
+                        {{ slide.headlineFirstLine }}
+                    </p>
+                    <p>
+                        {{ slide.headlineSecondLine }}
+                    </p>
+                </div>
+                <div class="slide-rect-filter">
+                    <div class="slide-rect" v-bind:style="{'border-image-source': 'url(' + slide.rectImg + ')'}">
+                    </div>
+                </div>
+                <div class="slide-content">
+                    <h1 class="slide-content-text">
+                        <p>
+                            {{ slide.headlineFirstLine }}
+                        </p>
+                        <p>
+                            {{ slide.headlineSecondLine }}
+                        </p>
+                    </h1>
+                    <p class="slide-phrase">
+                        {{ slide.phrase1 }}
+                    </p>
+                    <p class="slide-phrase">
+                        {{ slide.phrase2 }}
+                    </p>
+                    <a class="slide-content-cta" :href="slide.ctaLink">
+                        {{ slide.ctaText }}
+                    </a>
+                </div>
+                <h2 class="slide-side-text">
+                    <span>
+                        {{ slide.sublineFirstLine }} /
+                    </span>
+                    <span>
+                        {{ slide.sublineSecondLine
+                        }}
+                    </span>
+                </h2>
+            </div>
+
+        </div>
+        <div class="controls-container">
+            <button class="controls-button" v-bind:class="{ active: index === currentSlide }"
+                v-for="(slide, index) in slides" v-on:click="updateSlide(index)">
+                {{
+                slide.headlineFirstLine }} {{ slide.headlineSecondLine }}
+            </button>
+        </div>
+        <div class="pagination-container">
+            <span class="pagination-item" v-bind:class="{ active: index === currentSlide }"
+                v-for="(slide, index) in slides" v-on:click="updateSlide(index)">
+            </span>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js">
+    </script>
+    <script src="js/index.js">
+    </script>
+</body>
+
+</html>
+
+<div
+    style="background-color: #f9f9f9; padding: 80px 0; text-align: center; border-top: 1px solid #e0e0e000; border-bottom: 1px solid #e0e0e000;">
+    <p
+        style="font-size: 2.2em; font-weight: bold; line-height: 1.5; max-width: 800px; margin: 0 auto; font-family: 'Playfair Display', serif; color: #333; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); letter-spacing: 2.5px;">
+        “To improve is to change, to be perfect is to change often.”
+    </p>
+    <p
+        style="margin-top: 30px; font-size: 1.3em; font-style: italic; font-family: 'Playfair Display', serif; color: #666; font-weight: 500; letter-spacing: 4px;">
+        — Winston Churchill
+    </p>
+</div>
+
+
+<div class="card-hover" style="margin-left: 5%;; margin-bottom: 10px;">
+    <div class="card-hover__content">
+        <div style="background-color: #f5f5f5; padding: 3px; border-radius: 8px;">
+            <h3
+                style="font-family: 'Arial', sans-serif; font-size: 22px; color: #252525; text-align: center; margin-bottom: 15px; font-weight: 600;">
+                Objective Statement:
+            </h3>
+            <p
+                style="font-family: 'Arial', sans-serif; font-size: 16px; color: #000000; line-height: 1.6; margin: 0; padding: 0;">
+                In today's evolving energy landscape, the APO industry stands at the forefront of championing
+                sustainability and environmental stewardship. Recognizing the imperative to address emissions and
+                elevate energy efficiency, our program emerges from the diligent endeavors of our Health, Safety, and
+                Environment (HSE) department. This innovative tool not only quantifies emissions with precision but also
+                showcases the potential of hydrogen injection in feed gas as a transformative solution. By integrating
+                this method, we aim to significantly reduce our carbon footprint, emphasizing our unwavering commitment
+                to fostering a greener, more sustainable future. As we stride ahead, we invite you to explore this
+                testament to our dedication to the planet and its well-being
+            </p>
+        </div>
+        <a href="#" class="card-hover__link">
+            <span>Learn How</span>
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+        </a>
+    </div>
+    <div class="card-hover__extra">
+        <h4>
+        </h4>
+    </div>
+    <img src="img/3.avif" alt="">
+</div>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap");
+
+
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+
+    .card-hover {
+        width: 1500px;
+        /* Agrandi la largeur */
+        height: 850px;
+        /* Agrandi la hauteur */
+        border: 1px solid #e0e0e0;
+        /* This is a light gray border. */
+        border-radius: 80px;
+        /* This will round the corners slightly. */
+        overflow: hidden;
+        /* Ensures that any content or child elements are constrained within the card. */
+        transition: box-shadow 0.3s ease-in-out;
+        /* For a hover effect */
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 0 32px -10px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-hover:has(.card-hover__link:hover) .card-hover__extra {
+        transform: translateY(0);
+        transition: transform 0.35s;
+    }
+
+    .card-hover:hover .card-hover__content {
+        background-color: #E8E8E8;
+        bottom: 100%;
+        transform: translateY(100%);
+        padding: 50px 60px;
+        transition: all 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97);
+    }
+
+    .card-hover:hover .card-hover__link {
+        opacity: 1;
+        transform: translate(-50%, 0);
+        transition: all 0.3s 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97);
+    }
+
+    .card-hover:hover img {
+        transform: scale(1);
+        transition: 0.35s 0.1s transform cubic-bezier(0.1, 0.72, 0.4, 0.97);
+    }
+
+    .card-hover__content {
+        width: 100%;
+        text-align: center;
+        background-color: #e8e8e8ab;
+        padding: 0 60px 50px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(0);
+        transition: all 0.35s 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97);
+        will-change: bottom, background-color, transform, padding;
+        z-index: 1;
+    }
+
+    .card-hover__content::before,
+    .card-hover__content::after {
+        content: "";
+        width: 100%;
+        height: 120px;
+        background-color: inherit;
+        position: absolute;
+        left: 0;
+        z-index: -1;
+    }
+
+    .card-hover:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Adds a subtle shadow on hover */
+    }
+
+    .card-hover__content::before {
+        top: -80px;
+        -webkit-clip-path: ellipse(60% 80px at bottom center);
+        clip-path: ellipse(60% 80px at bottom center);
+    }
+
+    .card-hover__content::after {
+        bottom: -80px;
+        -webkit-clip-path: ellipse(60% 80px at top center);
+        clip-path: ellipse(60% 80px at top center);
+    }
+
+    .card-hover__title {
+        font-size: 1.5rem;
+        margin-bottom: 1em;
+    }
+
+    .card-hover__title span {
+        color: #555;
+    }
+
+    .card-hover__text {
+        font-size: 0.75rem;
+    }
+
+    .card-hover__link {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translate(-50%, 10%);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        text-decoration: none;
+        color: #555;
+        opacity: 0;
+        padding: 10px;
+        transition: all 0.35s;
+    }
+
+    .card-hover__link:hover svg {
+        transform: translateX(4px);
+    }
+
+    .card-hover__link svg {
+        width: 18px;
+        margin-left: 4px;
+        transition: transform 0.3s;
+    }
+
+    .card-hover__extra {
+        height: 50%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: center;
+        background-color: #E8E8E8;
+        padding: 80px;
+        bottom: 0;
+        z-index: 0;
+        color: #dee8c2;
+        transform: translateY(100%);
+        will-change: transform;
+        transition: transform 0.35s;
+    }
+
+    .card-hover__extra span {
+        color: #2d7f0b;
+    }
+
+    .card-hover img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center;
+        object-position: center;
+        z-index: -1;
+        transform: scale(1.2);
+        transition: 0.35s 0.35s transform cubic-bezier(0.1, 0.72, 0.4, 0.97);
+    }
+</style>
+
+<div id="references">
+    <h2
+        style="font-family: 'Lora', serif; font-size: 2em; color: #333; margin-bottom: 30px; text-align: left; border-bottom: 2px solid #e0e0e000; padding-bottom: 10px; letter-spacing: 2px;">
+        References
+    </h2>
+    <p>
+        The program outlined here is designed to estimate greenhouse gas (GHG) emissions and assess energy efficiency
+        within APO's operational sphere. It's based on standards set by the American Petroleum Institute (API) and the
+        U.S. Environmental Protection Agency (EPA), enhanced with CR360 environmental management solutions. The
+        following references have been pivotal in shaping our program:
+    </p>
+    <ul>
+        <li>
+            American Petroleum Institute (API): Provides technical data and industry-specific insights for GHG emissions
+            estimation. [
+            <a href="#">
+                Read More
+            </a>
+            ]
+        </li>
+        <li>
+            U.S. Environmental Protection Agency (EPA): Offers guidelines for quantifying and reporting GHG emissions in
+            line with regulatory mandates. [
+            <a href="#">
+                Read More
+            </a>
+            ]
+        </li>
+        <li>
+            Intergovernmental Panel on Climate Change (IPCC): Provides internationally recognized standards for GHG
+            emissions quantification. [
+            <a href="#">
+                Read More
+            </a>
+            ]
+        </li>
+        <li>
+            CR360: The CR360 environmental management solutions have been instrumental in enabling proficient management
+            of GHG emissions, thereby augmenting our program’s efficacy in aligning with contemporary emissions
+            reduction paradigms. Accessible at
+            <a href="#">
+                CR360 Environmental Management Solutions
+            </a>
+            .
+        </li>
+    </ul>
+    <p>
+        These esteemed references collectively undergird the rigorous methodological approach adopted in our program,
+        ensuring that the estimations and appraisals conducted for APO are both accurate and congruent with prevailing
+        industry standards and regulatory stipulations, while also embracing modern emissions management solutions.
+    </p>
+</div>
+<div class="w-100 bg-black py-3">
+    <div class="container">
+        <div class="row pt-2">
+            <div class="col-12">
+                <p class="text-left text-light " style="text-align:center ;color:black">
+                    Copyright © 2023 APOCORE
+                    | Designed by Wejden yaakoubi
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

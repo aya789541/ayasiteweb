@@ -1,0 +1,1238 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <link href="img/bar.png" rel="icon" type="image/png" />
+    <title>Decarbonization Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--
+Template 2110 Character
+http://www.tooplate.com/view/2110-character
+-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+    <!-- https://fonts.google.com/specimen/Open+Sans -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" id="et-builder-googlefonts-cached-css"
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Noto+Serif:regular,italic,700,700italic|Source+Sans+Pro:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,900,900italic|Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic&amp;subset=latin,latin-ext&amp;display=swap"
+        type="text/css" media="all">
+    <link rel="stylesheet" id="divi-style-css"
+        href="https://www.elegantthemes.com/layouts/wp-content/themes/Divi/style-static.min.css?ver=4.22.2"
+        type="text/css" media="all">
+
+    <link rel="stylesheet" as="style" id="et-core-unified-deferred-217086-cached-inline-styles"
+        href="https://www.elegantthemes.com/layouts/wp-content/et-cache/217086/et-core-unified-deferred-217086.min.css?ver=1695341667"
+        onload="this.onload=null;this.rel='stylesheet';">
+
+
+    <style>
+        body #page-container .et_pb_section .et_pb_button_0,
+        body #page-container .et_pb_section .et_pb_button_3,
+        body #page-container .et_pb_section .et_pb_button_1,
+        body #page-container .et_pb_section .et_pb_button_2 {
+            color: rgb(72, 97, 151) !important;
+            border-color: rgba(0, 0, 0, 0);
+            border-radius: 0px;
+            letter-spacing: 4px;
+            font-size: 14px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-weight: 700 !important;
+            text-transform: uppercase !important;
+            background-color: rgba(255, 255, 255, 0);
+            width: 100%;
+        }
+    </style>
+    <style type="text/css">
+        #dse-quicksearchdiv * {
+            box-sizing: content-box;
+        }
+
+        #dse-quicksearchdiv svg {
+            box-sizing: content-box;
+        }
+
+        #dse-disabledpopup * {
+            box-sizing: content-box;
+        }
+
+        #dse-search:before {
+            left: -4px !important;
+            top: 38% !important;
+            height: 6px !important;
+            width: 6px !important;
+            border: 1px solid #484644 !important;
+            border-right: none !important;
+            border-top: none !important;
+            content: ' ' !important;
+            background: #484644 !important;
+            position: absolute !important;
+            transform: rotate(45deg) !important;
+        }
+
+
+        .et_pb_column,
+        .et_pb_row,
+        .et_pb_row_inner {
+            background-size: cover;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+
+        #dse-disabledpopup:before {
+            left: -4px !important;
+            top: 38% !important;
+            height: 6px !important;
+            width: 6px !important;
+            border: 1px solid #484644 !important;
+            border-right: none !important;
+            border-top: none !important;
+            content: ' ' !important;
+            background: #484644 !important;
+            position: absolute !important;
+            transform: rotate(45deg) !important;
+        }
+
+        .topArrow #dse-search:before {
+            left: 50% !important;
+            top: -4px !important;
+            height: 6px !important;
+            width: 6px !important;
+            border: 1px solid #484644 !important;
+            border-top: none !important;
+            border-left: none !important;
+            content: ' ' !important;
+            background: #484644 !important;
+            position: absolute !important;
+            transform: rotate(225deg) !important;
+        }
+
+        .topArrow #dse-disabledpopup:before {
+            left: 50% !important;
+            top: -4px !important;
+            height: 6px !important;
+            width: 6px !important;
+            border: 1px solid #484644 !important;
+            border-top: none !important;
+            border-left: none !important;
+            content: ' ' !important;
+            background: #484644 !important;
+            position: absolute !important;
+            transform: rotate(225deg) !important;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 15px;
+            color: #000000;
+            background-color: #fff;
+            line-height: 1.7em;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            letter-spacing: 1.5px;
+            width: 100%;
+        }
+
+        #dse-disabledpopup:hover:before,
+        #dse-search:hover:before,
+        #dse-moreoptions:hover,
+        #dse-search:hover,
+        #dse-copy:hover,
+        #dse-disabledpopup:hover,
+        #dse-lookup:hover,
+        #dse-disableFeature:hover {
+            background-color: #666 !important;
+        }
+
+        #dse-disabledpopup:active:before,
+        #dse-search:active:before,
+        #dse-moreoptions:active,
+        #dse-search:active,
+        #dse-copy:active,
+        #dse-disabledpopup:active,
+        #dse-lookup:active,
+        #dse-disableFeature:active {
+            background-color: #666 !important;
+        }
+
+        .et_pb_text_14,
+        .et_pb_text_12,
+        .et_pb_text_13,
+        .et_pb_text_15 {
+            border-radius: 10px 0 0 0;
+            overflow: hidden;
+            border-top-width: 3px;
+            border-left-width: 3px;
+            border-color: rgba(179, 201, 56, 0.14);
+            padding-top: 20px !important;
+            padding-left: 20px !important;
+            margin-bottom: 10px !important;
+            width: 90%;
+        }
+    </style>
+    <style>
+        .fas {
+            cursor: pointer;
+            font-size: 1.5em;
+            transition: transform 0.3s;
+        }
+
+        .fas:hover {
+            color: #ddd;
+            /* Changez cette couleur si nécessaire */
+        }
+
+        .content {
+            transition: max-height 0.3s;
+            overflow: hidden;
+        }
+
+
+        .tm-hero-text {
+
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            margin-top: 30px;
+            margin: 0;
+            border-left: 4px solid #f1f1f1;
+            letter-spacing: 1px;
+            width: 70%;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            text-align: justify;
+        }
+
+
+        .tm-block-brand {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            height: 0%;
+        }
+
+        .tm-bg-primary-dark {
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .fas.fa-braille {
+            margin-right: 15px;
+            font-size: 2em;
+            color: #fff;
+        }
+
+        .tm-brand-name {
+
+            font-size: 1.3em;
+            letter-spacing: 1px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+
+        /* En-tête */
+        .tm-text-uppercase {
+
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .fas {
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: transform 0.3s;
+            margin-top: 15px;
+        }
+
+        .fas:hover {
+            color: #ddd;
+        }
+
+        /* Contenu */
+        .content h3 {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 20px 0 10px;
+            font-weight: 500;
+            font-size: 1.1em;
+        }
+
+        .content p {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.5;
+            font-size: 0.95em;
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: rgba(255, 255, 255, 0.95);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .navbar.scrolled {
+            transform: scale(0.95);
+        }
+
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 700;
+            transition: transform 0.3s, color 0.3s, margin-top 0.3s;
+            display: inline-block;
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Gill Sans", "Gill Sans MT", Arial, sans-serif;
+            letter-spacing: 2px;
+            font-size: small;
+        }
+
+        .navbar a:hover {
+            transform: translateY(-5px);
+            /* Slight upward movement */
+            color: #555;
+        }
+
+        .navbar-logo img {
+            height: 70px;
+            margin-right: 15px;
+            transition: transform 0.3s;
+        }
+
+        .navbar.scrolled .navbar-logo img {
+            transform: scale(0.85);
+        }
+
+
+        .hero {
+            background-image: url('img/nasa.avif');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 130px 0;
+            margin-top: 0%;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 56px;
+            margin-bottom: 50px;
+            margin-top: 80px;
+            color: #ffffff;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-shadow: 2px 2px 5px #0000002b, -2px -2px 5px rgba(0, 0, 0, 0.032);
+
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .cta-button {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            display: inline-block;
+            background-color: #dedfdfe2;
+            color: #000000;
+            font-size: 16px;
+            padding: 0;
+            text-decoration: none;
+            border-radius: 30px;
+            width: 30%;
+            margin-bottom: 0%;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+        /* Importing a sophisticated font */
+
+        .letter-container {
+            background-color: #ffffff;
+            padding: 10px 20px;
+            width: 100%;
+            margin: 10px auto;
+            font-family: 'Lora', serif;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.185);
+            border-radius: 0px;
+            max-width: 1400px;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            background-image: url('https://www.toptal.com/designers/subtlepatterns/paper.png');
+            background-repeat: repeat;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(245, 245, 245, 0.9)), url('https://www.toptal.com/designers/subtlepatterns/paper.png');
+
+        }
+
+        .letter-container h2 {
+            color: #1a1a1a;
+            font-family: 'Lora', serif;
+            margin-bottom: 35px;
+            font-size: 32px;
+            font-weight: 600;
+            border-bottom: 2px solid #d6d6d600;
+            padding-bottom: 18px;
+            text-transform: none;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .letter-container p {
+            color: #3e3e3e;
+            line-height: 1.9;
+            font-size: 16px;
+            margin-bottom: 28px;
+            text-align: justify;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-weight: 400;
+            color: #000000;
+            width: 90%;
+            text-align: justify;
+            margin-left: 5%;
+            letter-spacing: 1px;
+        }
+
+        #transition-quote {
+            text-align: center;
+            font-style: italic;
+            padding: 50px 0;
+            font-size: 1.2em;
+        }
+
+        #transition-quote {
+            text-align: center;
+            font-style: italic;
+            border-top: 1px solid #dddddd00;
+            border-bottom: 1px solid #dddddd00;
+            margin: 50px 0;
+        }
+
+        a {
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        a:hover {
+            color: #555;
+        }
+
+        .btn {
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+                /* Slight movement from below */
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeIn 1s forwards;
+            opacity: 0;
+        }
+    </style>
+    <script>
+        // JavaScript for adjusting navbar on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 10) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <style>
+        .navbar.scrolled {
+            transform: scale(0.9);
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+
+        .navbar.scrolled a,
+        .navbar.scrolled label {
+            opacity: 0.8;
+            font-weight: 700;
+        }
+
+        .animated-arrow {
+            display: inline-block;
+            margin-left: 10px;
+            /* space between title and arrow */
+            font-size: 24px;
+            animation: bounceArrow 0.7s infinite alternate;
+        }
+
+        @keyframes bounceArrow {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(5px);
+            }
+        }
+    </style>
+
+    <style type="text/css">
+        #dse-quicksearchdiv * {
+            box-sizing: content-box;
+        }
+
+        #dse-quicksearchdiv svg {
+            box-sizing: content-box;
+        }
+
+        #dse-disabledpopup * {
+            box-sizing: content-box;
+        }
+
+        #dse-search:before {
+            left: -4px !important;
+            top: 38% !important;
+            height: 6px !important;
+            width: 6px !important;
+            border: 1px solid #484644 !important;
+            border-right: none !important;
+            border-top: none !important;
+            content: ' ' !important;
+            background: #484644 !important;
+            position: absolute !important;
+            transform: rotate(45deg) !important;
+        }
+
+        #dse-disabledpopup:before {
+            left: -4px !important;
+            top: 38% !important;
+            height: 6px !important;
+            width: 6px !important;
+            border: 1px solid #484644 !important;
+            border-right: none !important;
+            border-top: none !important;
+            content: ' ' !important;
+            background: #484644 !important;
+            position: absolute !important;
+            transform: rotate(45deg) !important;
+        }
+
+        .topArrow #dse-search:before {
+            left: 50% !important;
+            top: -4px !important;
+            height: 6px !important;
+            width: 6px !important;
+            border: 1px solid #484644 !important;
+            border-top: none !important;
+            border-left: none !important;
+            content: ' ' !important;
+            background: #484644 !important;
+            position: absolute !important;
+            transform: rotate(225deg) !important;
+        }
+
+        .topArrow #dse-disabledpopup:before {
+            left: 50% !important;
+            top: -4px !important;
+            height: 6px !important;
+            width: 6px !important;
+            border: 1px solid #484644 !important;
+            border-top: none !important;
+            border-left: none !important;
+            content: ' ' !important;
+            background: #484644 !important;
+            position: absolute !important;
+            transform: rotate(225deg) !important;
+        }
+
+        #dse-disabledpopup:hover:before,
+        #dse-search:hover:before,
+        #dse-moreoptions:hover,
+        #dse-search:hover,
+        #dse-copy:hover,
+        #dse-disabledpopup:hover,
+        #dse-lookup:hover,
+        #dse-disableFeature:hover {
+            background-color: #666 !important;
+        }
+
+        #dse-disabledpopup:active:before,
+        #dse-search:active:before,
+        #dse-moreoptions:active,
+        #dse-search:active,
+        #dse-copy:active,
+        #dse-disabledpopup:active,
+        #dse-lookup:active,
+        #dse-disableFeature:active {
+            background-color: #666 !important;
+        }
+    </style>
+</head>
+
+<body class="tm-bg-dark" style="padding: 0%; background-color: #66666623;" data-new-gr-c-s-check-loaded="14.1135.0"
+    data-gr-ext-installed="">
+
+    <div class="navbar scrolled">
+        <div class="navbar-logo">
+            <a href="/home">
+                <img alt="Logo" src="img/logoo.png">
+            </a>
+        </div>
+        <div>
+            <a href="/home">
+                Home
+            </a>
+            <a href="/signin">
+                Sign In
+            </a>
+            <a href="/emission">
+                Emissions
+            </a>
+            <a href="/energy">
+                Efficiency
+            </a>
+            <a href="/hydro">
+                Try Demo
+            </a>
+            <a href="/history">
+                User
+            </a>
+            <a id="logout-link">
+                Logout
+            </a>
+        </div>
+    </div>
+    <div>
+
+        <section class="hero">
+            <h1 style="font-size: large; margin-bottom: 0%;">
+                'From stars to systems
+            </h1>
+            <h1 style="margin-top: 0%;">
+                The universe demands ENERGY EFFICIENCY'
+            </h1>
+            <a class="cta-button" href="#app"
+                style="margin-right: 1%; padding: 10px 10px;     background-color: #dedfdff8;">
+                Get Your Questions Answered
+            </a>
+            <a class="cta-button" href="/energypath"
+                style="margin-left: 1%; padding: 10px 10px; width: 23%;  background-color: #dedfdf75;">
+                Try Energy Calcuator
+            </a>
+
+        </section>
+        <script>
+            window.addEventListener('scroll', function () {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        </script>
+        <div id= "app" class="letter-container">
+            <h2 style="margin-top: 10px; letter-spacing: 1.5PX;">
+                Efficiency Guide
+            </h2>
+            <p style="margin-bottom: 2px;">
+                Within the framework established at APO, a particular emphasis is placed on assessing the energy and
+                thermal efficiency of critical components, notably turbines and heaters. This scrutiny is paramount,
+                given the significant role these units play in the overall operational efficiency of the natural gas
+                sector.
+            </p>
+            <p style="margin-bottom: 2px;">
+                For turbines, the calculations offer a detailed insight into energy conversion rates, presenting a clear
+                picture of their operational efficiency. Similarly, when assessing heaters, the emphasis is on deriving
+                their thermal efficiency, representing the effectiveness of heat transfer processes.
+
+            </p>
+            <p>
+                Through the rigorous implementation of this framework, there's a strong commitment to environmental
+                stewardship. This aligns APO's stationary combustion operations with industry best practices and
+                contributes significantly to global efforts in mitigating greenhouse gas emissions from such processes.
+            </p>
+            <a class="cta-button" href="#et-main-area"
+                style="margin-left: 80%; padding: 10px 10px; width: 23%; background-color: #dedfdf88; border-radius: 2px; font-size: small; font-weight: 500;">
+                View Details
+            </a>
+        </div>
+        <style>
+            .question-btn {
+                display: block;
+                background-color: transparent;
+                border: none;
+                color: white;
+                text-align: left;
+                width: 120%;
+                margin-left: -40px;
+                cursor: pointer;
+                font-weight: 500;
+                transition: background-color 0.3s;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+                letter-spacing: 1.3px;
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+
+            .question-btn:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+
+            .answer {
+                padding: 10px 0;
+                color: #ffffff;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                margin-top: 10px;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+                letter-spacing: 1.5px;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        </style>
+
+        <script>
+            function toggleAnswer(answerId) {
+                var answer = document.getElementById(answerId);
+                if (answer.style.display === "none") {
+                    answer.style.display = "block";
+                } else {
+                    answer.style.display = "none";
+                }
+            }
+        </script>
+
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <!-- https://jquery.com/download/ -->
+        <script>
+
+            let callAdjustLayout;
+            let currentLayout = "desktop",
+                nextLayout = "desktop";
+
+            /**
+             * detect IE
+             * returns version of IE or false, if browser is not Internet Explorer
+             */
+            function detectIE() {
+                var ua = window.navigator.userAgent;
+
+                var msie = ua.indexOf('MSIE ');
+                if (msie > 0) {
+                    // IE 10 or older => return version number
+                    return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+                }
+
+                var trident = ua.indexOf('Trident/');
+                if (trident > 0) {
+                    // IE 11 => return version number
+                    var rv = ua.indexOf('rv:');
+                    return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+                }
+
+                var edge = ua.indexOf('Edge/');
+                if (edge > 0) {
+                    // Edge (IE 12+) => return version number
+                    return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+                }
+
+                // other browser
+                return false;
+            }
+
+            // Adjust layout based on the browser width
+            function adjustLayout() {
+                let block1, block2, block3, block4, block5, block6, block7, block8, block9;
+
+                if (window.innerWidth <= 1199) {
+                    // Mobile layout
+                    nextLayout = "mobile";
+                    block1 = $("div[data-mobile-seq-no='1']");
+                    block2 = $("div[data-mobile-seq-no='2']");
+                    block3 = $("div[data-mobile-seq-no='3']");
+                    block4 = $("div[data-mobile-seq-no='4']");
+                    block5 = $("div[data-mobile-seq-no='5']");
+                    block6 = $("div[data-mobile-seq-no='6']");
+                    block7 = $("div[data-mobile-seq-no='7']");
+                    block8 = $("div[data-mobile-seq-no='8']");
+                    block9 = $("div[data-mobile-seq-no='9']");
+                } else {
+                    // Desktop layout
+                    nextLayout = "desktop";
+                    block1 = $("div[data-desktop-seq-no='1']");
+                    block2 = $("div[data-desktop-seq-no='2']");
+                    block3 = $("div[data-desktop-seq-no='3']");
+                    block4 = $("div[data-desktop-seq-no='4']");
+                    block5 = $("div[data-desktop-seq-no='5']");
+                    block6 = $("div[data-desktop-seq-no='6']");
+                    block7 = $("div[data-desktop-seq-no='7']");
+                    block8 = $("div[data-desktop-seq-no='8']");
+                    block9 = $("div[data-desktop-seq-no='9']");
+                }
+
+                if (nextLayout !== currentLayout) {
+                    // Reorder blocks based on their seq no
+                    block1.after(block2.detach());
+                    block2.after(block3.detach());
+                    block3.after(block4.detach());
+                    block4.after(block5.detach());
+                    block5.after(block6.detach());
+                    block6.after(block7.detach());
+                    block7.after(block8.detach());
+                    block8.after(block9.detach());
+                    currentLayout = nextLayout;
+                }
+            }
+
+            // Adjust layout upon window resize
+            window.onresize = function () {
+                clearTimeout(callAdjustLayout);
+                callAdjustLayout = setTimeout(adjustLayout, 100);
+            }
+
+            // DOM is ready
+            $(function () {
+                if (detectIE()) {
+                    alert('Please use the latest version of Chrome or Firefox for best browsing experience.');
+                }
+
+                adjustLayout();
+            })
+        </script>
+        <script>document.getElementById("toggleContent").addEventListener("click", function () {
+                var content = document.querySelector(".content");
+                if (content.style.display === "none") {
+                    content.style.display = "block";
+                } else {
+                    content.style.display = "none";
+                }
+            });
+
+        </script>
+
+
+        <div id="et-main-area" style="width: 90%; margin-left: 5%; margin-top: 0%;">
+            <div id="main-content">
+                <article id="post-217086" class="post-217086 page type-page status-publish hentry">
+                    <div class="entry-content">
+                        <div class="et-l et-l--post">
+                            <div class="et_builder_inner_content et_pb_gutters3">
+
+                            </div>
+                            <div class="et_pb_section et_pb_section_2 et_hover_enabled et_section_regular">
+
+                                <div class="et_pb_row et_pb_row_5 et_pb_row_4col">
+                                    <div class="et_pb_column et_pb_column_1_4 et_pb_column_15  et_pb_css_mix_blend_mode_passthrough"
+                                        style="margin-left: 12%; text-align: justify;width: 110%;">
+                                        <div
+                                            class="et_pb_with_border et_pb_module et_pb_text et_pb_text_12  et_pb_text_align_left et_pb_bg_layout_light">
+                                            <div class="et_pb_text_inner">
+                                                <h3>Efficiency Assessment for Fired Process Heaters</h3>
+                                                <p>This method evaluates the efficiency of gaseous fuel-based
+                                                    fired
+                                                    process heaters. Factors considered include ambient
+                                                    conditions like
+                                                    temperature and humidity, estimated radiation losses, exit
+                                                    temperatures of flue gas, oxygen content in flue gas,
+                                                    composition of
+                                                    fuel gas, and fuel supply temperatures. Both 'wet basis' and
+                                                    'dry
+                                                    basis' oxygen sampling are accommodated. The results provide
+                                                    details
+                                                    on flue gas composition relative to the mass of fuel gas
+                                                    burned, net
+                                                    and gross thermal efficiencies, as well as overall fuel
+                                                    efficiency.
+                                                </p>
+                                                <a style="margin-left: 80%; color: rgb(4, 61, 136); letter-spacing: 2.5px; font-weight: 500;" href="/energypath">Learn More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="et_pb_column et_pb_column_1_4 et_pb_column_16  et_pb_css_mix_blend_mode_passthrough"
+                                        style="margin-left: 12%; text-align: justify; width: 110%;">
+                                        <div
+                                            class="et_pb_with_border et_pb_module et_pb_text et_pb_text_13  et_pb_text_align_left et_pb_bg_layout_light">
+                                            <div class="et_pb_text_inner">
+                                                <h3>Gas Turbine Power Estimations</h3>
+                                                <p>The process aims to determine the site-specific power output
+                                                    of a gas
+                                                    turbine under given operational conditions. While base
+                                                    references
+                                                    can offer foundational insights, the actual site power is
+                                                    notably
+                                                    affected by several factors. Crucial determinants include
+                                                    ambient
+                                                    temperature, humidity levels, and inherent losses
+                                                    experienced during
+                                                    both the inlet and exhaust phases. Additionally, while
+                                                    natural gas
+                                                    consistently serves as the fuel source, variations in its
+                                                    molar
+                                                    composition can significantly influence the turbine's
+                                                    output. By
+                                                    meticulously accounting for these elements, this methodology
+                                                    furnishes a thorough understanding of the turbine's
+                                                    site-specific
+                                                    performance, facilitating more astute operational and
+                                                    maintenance
+                                                    strategies.</p>
+                                                <a style="margin-left: 80%;color: rgb(4, 61, 136); letter-spacing: 2.5px; font-weight: 500;" href="/energypath">Learn More</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="chat-bubble">
+        <div class="chat-icon">
+            🗨️
+        </div>
+        <div class="chat-content" style="display: none;">
+            <p class="welcome-msg">Welcome!. How can I assist you?</p>
+            <ul class="questions-list">
+                <li>What is the contact for your website?</li>
+                <li>Where are you located?</li>
+                <li>What services do you offer?</li>
+                <li>Other questions...</li>
+            </ul>
+            <div class="evaluation" style="display: none;">
+                <p>Thank you! Rate Our chat :</p>
+                <span class="star" data-value="1">☆</span>
+                <span class="star" data-value="2">☆</span>
+                <span class="star" data-value="3">☆</span>
+                <span class="star" data-value="4">☆</span>
+                <span class="star" data-value="5">☆</span>
+            </div>
+        </div>
+    </div>
+
+    <script>$(document).ready(function () {
+            $('.chat-bubble').on('click', function () {
+                if (!$('.chat-content').is(':visible')) {
+                    $('.chat-content').fadeIn();
+                    return;
+                }
+
+                if ($('.evaluation').is(':visible')) {
+                    return;
+                }
+
+                if ($('.welcome-msg').text() !== 'Réflexion...') {
+                    $('.chat-content').fadeOut();
+                }
+            });
+
+            function resetChat() {
+                $('.welcome-msg').text('Bienvenue à notre société. Comment pouvons-nous vous aider?');
+                $('.questions-list').show();
+                $('.evaluation').hide();
+                $('.star').removeClass('active');
+            }
+
+            $('.questions-list li').on('click', function () {
+                var question = $(this).text();
+                var response = "";
+
+                $('.questions-list').hide();
+                $('.welcome-msg').text('Réflexion...');
+
+                setTimeout(function () {
+                    switch (question) {
+                        case 'What is the contact for your website?':
+                            response = "You can contact us at contact@mysite.com";
+                            break;
+                        case 'Where are you located?':
+                            response = "We are located in Paris, France.";
+                            break;
+                        case 'What services do you offer?':
+                            response = "We offer web, design, and marketing services.";
+                            break;
+                        case 'Other questions...':
+                            response = "If you have any further questions, please contact our service at +1234567890. Thank you!";
+                            break;
+                    }
+                    $('.welcome-msg').text(response);
+                    $('.evaluation').fadeIn();
+                }, 2000);
+            });
+
+            $('.star').on('click', function () {
+                let value = $(this).data('value');
+                $('.star').slice(0, value).addClass('active');
+                setTimeout(function () {
+                    resetChat();
+                }, 1500);
+            });
+        });
+
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .chat-bubble {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            /* Couleur de fond de la bulle */
+            color: black;
+            /* Couleur de l'icône */
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            /* Ombre légère pour la bulle */
+        }
+
+        .chat-icon {
+            font-size: 24px;
+        }
+
+        .chat-content {
+            position: absolute;
+            bottom: 70px;
+            right: 20px;
+            width: 250px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            display: none;
+            color: black;
+            /* Couleur du texte */
+        }
+
+        .chat-content ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .chat-content ul li {
+            padding: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            color: black;
+            /* Couleur du texte */
+        }
+
+        .chat-content ul li:hover {
+            background-color: #f8f9fa;
+        }
+
+        .input-area {
+            margin-top: 10px;
+        }
+
+        .input-area input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .star {
+            cursor: pointer;
+            font-size: 1.5em;
+            color: #CCCCCC;
+            /* Couleur par défaut des étoiles */
+        }
+
+        .star.active {
+            color: gold;
+            /* Couleur des étoiles actives */
+        }
+
+        .welcome-msg {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #555;
+            /* Une couleur gris foncé pour un texte de bienvenue élégant */
+        }
+
+        .questions-list {
+            border: 1px solid #e5e5e5;
+        }
+    </style>
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+
+
+    <div id="forest-ext-shadow-host"></div>
+    <div id="dse-quicksearch" style="position: fixed; z-index: 10000; display: none;">
+        <div id="dse-disabledpopup"
+            style="cursor: pointer;display: block;position: relative;width: fit-content;padding: 8px;line-height: 16px;border: 1px solid #666;border-radius: 6px;background-color: #484644;font-style: normal;font-weight: normal;color:  #fff;font-size: 13px;font-family: Roboto,Arial,Helvetica,sans-serif;box-shadow: 0px 3px 4px 0px rgba(0,0,0,.14);">
+            <span style="
+            float: left;
+            padding: 0px 12px 0px 4px;
+            ">
+                You've turned off quick searches.
+            </span>
+            <span id="dse-undo" style="padding: 0px 4px 0px 8px;">
+                <span style="
+               width: 15px;
+               height: 15px;
+               float: left;
+               ">
+                    <svg enable-background="new 0 0 16 16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m14.259 2.75c-1.159-1.16-2.688-1.744-4.207-1.743-1.52-.001-3.049.583-4.208 1.743l-2.843 2.827v-2.57c0-.552-.448-1-1-1h-.016c-.552 0-.984.448-.984 1v5c0 .552.432.993.984.993h5.016c.552 0 1-.441 1-.993s-.448-1-1-1h-2.601l2.859-2.843c.774-.773 1.779-1.156 2.793-1.157 1.014.001 2.019.384 2.793 1.157.772.774 1.155 1.778 1.156 2.793-.001 1.014-.384 2.019-1.157 2.793l-4.543 4.543c-.391.391-.391 1.024 0 1.414.391.391 1.024.391 1.414 0l4.543-4.543c1.16-1.159 1.743-2.688 1.742-4.207.002-1.52-.582-3.048-1.741-4.207z"
+                            fill="#fff"></path>
+                        <path d="m0 0h16v16h-16z" fill="none"></path>
+                    </svg>
+                </span>
+                Undo
+            </span>
+        </div>
+        <div id="dse-quicksearchdiv"
+            style="display: inline-block;position: relative;height: 32px;border: 1px solid #666;border-radius: 6px;background-color: #484644; font-style: normal;font-weight: normal;color:  #fff;font-size: 13px;font-family: Roboto,Arial,Helvetica,sans-serif;box-shadow: 0px 3px 4px 0px rgba(0,0,0,.14);">
+            <div id="dse-search"
+                style="border-radius: 5px 0px 0px 5px;height:-webkit-fill-available;height:-moz-fit-content;float: left;line-height: 15px;text-align: center;cursor: pointer;box-sizing: border-box;">
+                <span style="
+               float: left;
+               padding: 8px 12px 8px 8px;
+               height: -webkit-fill-available;
+               ">
+                    Web
+                    search
+                </span>
+            </div>
+            <div style="        border-left: 1px solid #D2D0CE;
+            float: left;
+            margin: 0px;
+            top: 0;
+            height: 32px;
+            "></div>
+            <div style="height:-webkit-fill-available;height:-moz-fit-content;float: left;padding: 8px 12px 8px 12px;line-height: 15px;text-align: center;cursor: pointer;"
+                id="dse-copy">
+                Copy
+            </div>
+            <div style="        border-left: 1px solid #D2D0CE;
+            height: 32px;
+            float: left;
+            margin: 0px;
+            top: 0;
+            "></div>
+            <div id="dse-moreoptions"
+                style="border-radius: 0px 5px 5px 0px;height:-webkit-fill-available;height:-moz-fit-content;width: 16px;float: left;padding: 8PX 8px 0px 8px;text-align: center; cursor: pointer;position: relative;">
+                <span style="width: 16px;">
+                    <svg enable-background="new 0 0 16 16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m1.5 6.5c-.828 0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5 1.5-.672 1.5-1.5-.672-1.5-1.5-1.5zm6.5 0c-.828 0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5 1.5-.672 1.5-1.5-.672-1.5-1.5-1.5zm6.5 0c-.828 0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5 1.5-.672 1.5-1.5-.672-1.5-1.5-1.5z"
+                            fill="#fff"></path>
+                        <path d="m0 0h16v16h-16z" fill="none"></path>
+                    </svg>
+                </span>
+            </div>
+            <div>
+                <span
+                    style="width: 160px;border: 1px solid #666;border-radius: 6px;position: absolute;top: 40px;left: 105px;box-shadow: 0px 3px 4px 0px rgba(0,0,0,.14);background-color: #484644;overflow: hidden;"
+                    id="dse-popup">
+                    <div style="padding: 8px 12px;line-height: 15px;font-size: 13px;cursor: pointer;text-align: left;"
+                        id="dse-lookup">
+                        Define
+                    </div>
+                    <hr style="        border: 0.5px solid #D2D0CE;
+                  margin: 0;
+                  cursor: default;
+                  height: 0px;
+                  background-color: #3b3a39;">
+                    <div style="padding: 8px 12px;line-height: 15px;font-size: 13px;cursor: pointer;text-align: left;"
+                        id="dse-disableFeature">
+                        Turn off quick searches
+                    </div>
+                </span>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

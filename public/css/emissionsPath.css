@@ -1,0 +1,38 @@
+#bg1{
+    background-image: url("https://scontent.ftun16-1.fna.fbcdn.net/v/t1.15752-9/374972655_208638915318297_1714091278327482154_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=dyvU0vr0FlcAX_oYnIf&_nc_ht=scontent.ftun16-1.fna&oh=03_AdS-wRQwnBLSPqQpf7rsOJo_Oy-ij1_FzxLflbK_ou3uog&oe=651DF2D4");
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#bg2{
+    background-image: url("https://scontent.ftun16-1.fna.fbcdn.net/v/t1.15752-9/372741856_1435179177054620_248535811175632065_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=Algbi0GQiaMAX8a5CT8&_nc_ht=scontent.ftun16-1.fna&oh=03_AdRhRE7NnhLiAKGJBjpo2-xqUTIBLXl_RpGG1n2430k-LQ&oe=651DCCD4");
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#bg3{
+    background-image: url("https://scontent.ftun16-1.fna.fbcdn.net/v/t1.15752-9/375197055_348521557770458_2808113521793860031_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=fzqWm1QyXcYAX_xMpCZ&_nc_ht=scontent.ftun16-1.fna&oh=03_AdQmZEM8ITSf7KqUl87M5vPgyI5wk-mZdcnM7D9pZnYu1Q&oe=651DE9A5");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#bg4{
+    background-image: url("https://scontent.ftun16-1.fna.fbcdn.net/v/t1.15752-9/373456879_825687202479401_1602460777472116382_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=h5MSZyQQAoYAX_UaTeF&_nc_oc=AQm3M4ld-h2h0VsluP8r-PFpY_6lCUWVU0HM6Bcp1O4oUcnC9wi74z4KQ4ki5b8wus4&_nc_ht=scontent.ftun16-1.fna&oh=03_AdQUdPn2SX2iWiYR6JU2ESRA1ldUeotMIlFHAU1dT4vvtQ&oe=651DD9EB");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#bg5{
+    background-image: url("https://scontent.ftun16-1.fna.fbcdn.net/v/t1.15752-9/373400903_1582326209257877_8580571303173079781_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=sEbI8lasdeAAX-Qk6i7&_nc_ht=scontent.ftun16-1.fna&oh=03_AdQW8nOMlUhP8yB6Alf1crTasHHF4bwqF5Ncgk-C9l7hEQ&oe=651DC6C9");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#select{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:small;
+    color: rgb(179, 201, 56);
+    background-color: transparent;
+    border-color: transparent;
+}
+#opt{
+    color: black;
+    background-color: transparent;
+}

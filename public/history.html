@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>User Upload History</title>
+    <link href="img/bar.png" rel="icon" type="image/png" />
+    <a href="home.html" style="padding: 6px 12px; font-size: 16px;">← Home</a>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 50px;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        a {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #f7f7f7;
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        a:hover {
+            background-color: #e9e9e9;
+        }
+
+        #fileList {
+            border-top: 1px solid #e9e9e9;
+            border-bottom: 1px solid #e9e9e9;
+        }
+
+        #fileList div {
+            border: none;
+            padding: 10px 15px;
+            margin: 0;
+            border-bottom: 1px solid #e9e9e9;
+        }
+
+        #fileList div:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="font-size: 24px; margin-top: 0; color: #333; border-bottom: 1px solid #e9e9e9; padding-bottom: 10px;">
+        Your Upload History</h1>
+    <div id="fileList">
+    </div>
+    <script>
+
+        window.addEventListener('load', function () {
+            const token = localStorage.getItem('token');
+
+            fetch('/history-files', {
+                headers: {
+                    'Authorization': 'Bearer ' + token
+                }
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        // Handle unauthorized error or other errors
+                        console.error('Failed to retrieve user history:', response.statusText);
+                        return;
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data && data.success && Array.isArray(data.files) && data.files.length) {
+                        const fileListDiv = document.getElementById('fileList');
+                        data.files.forEach(file => {
+                            const fileDiv = document.createElement('div');
+                            fileDiv.textContent = file;
+                            // Add a link to download the file (if needed)
+                            const downloadLink = document.createElement('a');
+                            downloadLink.href = `/download/${file}`;
+                            downloadLink.textContent = "Download";
+                            fileDiv.appendChild(downloadLink);
+                            fileListDiv.appendChild(fileDiv);
+                        });
+                    } else {
+                        const fileListDiv = document.getElementById('fileList');
+                        const noFilesMessage = document.createElement('p');
+                        noFilesMessage.textContent = "No generated files yet.";
+                        fileListDiv.appendChild(noFilesMessage);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+
+    </script>
+</body>
+
+</html>

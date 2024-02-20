@@ -1,0 +1,25 @@
+#bg1{
+    background-image: url("https://scontent.ftun16-1.fna.fbcdn.net/v/t1.15752-9/374972655_208638915318297_1714091278327482154_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=dyvU0vr0FlcAX_oYnIf&_nc_ht=scontent.ftun16-1.fna&oh=03_AdS-wRQwnBLSPqQpf7rsOJo_Oy-ij1_FzxLflbK_ou3uog&oe=651DF2D4");
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#bg2{
+    background-image: url("https://scontent.ftun16-1.fna.fbcdn.net/v/t1.15752-9/372741856_1435179177054620_248535811175632065_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=Algbi0GQiaMAX8a5CT8&_nc_ht=scontent.ftun16-1.fna&oh=03_AdRhRE7NnhLiAKGJBjpo2-xqUTIBLXl_RpGG1n2430k-LQ&oe=651DCCD4");
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#select{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:small;
+    color: rgb(179, 201, 56);
+    background-color: transparent;
+    border-color: transparent;
+}
+#opt{
+    color:white;
+    background-color: rgb(21, 31, 51);
+    border-radius: 5px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

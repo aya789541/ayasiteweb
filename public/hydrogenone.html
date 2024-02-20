@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="img/bar.png" rel="icon" type="image/png" />
+
+    <title>Unlock Your Potential Savings</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: flex-start;
+            justify-content: right;
+            height: 100vh;
+            background-image: url('img/hydrogen.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 60px;
+            /* Adjusted margin for spacing */
+            font-weight: 500;
+            text-align: right;
+            font-size: 24px;
+            /* Reduced font size for the heading */
+            letter-spacing: 7px;
+        }
+
+
+        label {
+            display: flex;
+            font-weight: 600;
+            /* increased weight for boldness */
+            font-size: 14px;
+            /* adjust the size as per your need */
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.9px;
+            /* slight spacing for elegance */
+        }
+
+        .input-section {
+            margin: 0 auto;
+            width: 90%;
+        }
+
+
+        input {
+            width: 95%;
+            padding: 12px 15px;
+            font-size: 12px;
+            border: 2px solid #d9e2e9;
+            border-radius: 60px;
+            background: #ffffff;
+            color: #333;
+            transition: border 0.3s ease;
+            margin-bottom: 15px;
+            /* Added space between each input field */
+        }
+
+
+        input:focus {
+            border-color: #87c8f4;
+            /* Soft Blue */
+            outline: none;
+        }
+
+        .input-section select:focus {
+            border-color: #87c8f4;
+            /* Soft Blue */
+            outline: none;
+            transform: scale(1.05);
+            /* Zoom-in effect. Adjust the scale factor as needed */
+        }
+
+
+        .calc-btn {
+            background: linear-gradient(45deg, #00BFFF, #1E90FF);
+            color: #FFF;
+            padding: 12px 30px;
+            font-size: 15px;
+            font-weight: 500;
+            /* Using a semi-bold weight for emphasis */
+            letter-spacing: 1.5px;
+            /* Adding some letter spacing for better legibility */
+            border-radius: 60px;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+            margin-top: 20px;
+            /* Adjust this value to your liking */
+            display: block;
+            margin-left: auto;
+        }
+
+        .calc-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .calc-btn:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(255, 255, 255, 0.2);
+            transition: width 0.3s ease;
+        }
+
+        .calc-btn:hover:before {
+            width: 100%;
+        }
+
+
+
+        .wrapper {
+            display: flex;
+            width: 90%;
+            justify-content: flex-start;
+            padding-left: 2%;
+            align-items: flex-start;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px 50px;
+            /* Reduced padding for smaller container */
+            border-radius: 20px;
+            /* Adjusted border-radius to keep aesthetics consistent */
+            width: 90%;
+            /* Reduced width for smaller container */
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.321);
+            /* Soft Shadow */
+            margin-right: 20px;
+            /* Adjust to your liking */
+            margin-top: 30px;
+        }
+
+        .input-section input[type="range"] {
+            width: 90%;
+            margin-top: 5px;
+            /* Adjust this value to your preference */
+            margin-bottom: 5px;
+            /* Adjust this value to your preference */
+            margin-left: 15px;
+            margin-right: 15px;
+
+
+        }
+
+        .input-section span {
+            display: inline-block;
+            width: 50px;
+            text-align: left;
+        }
+
+
+        input[type=range]::-webkit-slider-thumb {
+            width: 20px;
+            height: 20px;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            -webkit-appearance: none;
+        }
+
+        input[type=range]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+
+        .writing-content {
+            width: 95%;
+            padding-right: 2%;
+            font-family: 'Poppins', sans-serif;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+
+        }
+
+        .hydrogen-title {
+            color: #0a376a8f;
+            font-weight: 600;
+            font-size: 52px;
+            letter-spacing: 5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .writing-content h2 {
+            color: #0a376ac5;
+            font-weight: 600;
+            font-size: 32px;
+            margin: 10px;
+        }
+
+        .writing-content p.introduction {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #0a0b0be3;
+            /* Faded blue */
+            font-weight: 600;
+            /* Slightly bolder but not overpowering */
+            font-size: 14px;
+            /* A tad larger for emphasis */
+            line-height: 2;
+            /* Balanced line-height for readability */
+            margin-bottom: 5px;
+            /* Spacing after the introduction */
+            text-align: left;
+            /* Justified text */
+            letter-spacing: 0.9px;
+
+            width: 100%;
+        }
+
+        .writing-content g.introduction {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #1a1b1cc5;
+            /* Faded blue */
+            font-weight: 600;
+            /* Slightly bolder but not overpowering */
+            font-size: 13px;
+            /* A tad larger for emphasis */
+            line-height: 2;
+            /* Balanced line-height for readability */
+            margin-bottom: 20px;
+            /* Spacing after the introduction */
+            text-align: left;
+            /* Justified text */
+            letter-spacing: 0.9px;
+
+            width: 100%;
+        }
+
+        .writing-content a.introduction {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #0a0b0be3;
+            /* Faded blue */
+            font-weight: 600;
+            /* Slightly bolder but not overpowering */
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            /* Vertically centers the icon with the text */
+            gap: 10px;
+            width: 95%;
+        }
+
+        a.introduction {
+            transition: transform 0.3s ease-in-out;
+            display: inline-block;
+            /* makes sure the block elements zoom properly */
+        }
+
+        a.introduction:hover {
+            transform: scale(1.1);
+            /* zoom-in by 10% when hovered */
+        }
+
+
+        .writing-content B.introduction {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #2c3e50;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 1.7;
+            text-align: left;
+            letter-spacing: 0.9px;
+            width: 75%;
+        }
+
+        .writing-content h3 {
+            color: #01070d;
+            margin-bottom: 60px;
+            /* Adjusted margin for spacing */
+            font-weight: 500;
+            text-align: left;
+            font-size: 20px;
+            /* Reduced font size for the heading */
+            letter-spacing: 4px;
+            line-height: 1.4;
+        }
+
+        .calc-btn i {
+            margin-left: 10px;
+            font-weight: 1000;
+
+        }
+
+        .breadcrumb {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            color: #6c6c6c4f;
+            display: flex;
+            /* Use flexbox for easy alignment */
+            align-items: center;
+            /* Vertically align items in the center */
+            white-space: nowrap;
+            margin-bottom: 30px;
+            letter-spacing: 0.9px;
+
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #6c6c6cb9;
+            margin: 0 5px;
+            display: inline;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .input-section select {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 12px;
+            border: 2px solid #d9e2e9;
+            border-radius: 60px;
+            background: #ffffff;
+            color: #000000;
+            transition: transform 0.3s ease;
+            /* Targeting the transform property */
+            margin-bottom: 15px;
+        }
+
+        .input-section select option:disabled {
+            color: #a19d9d;
+        }
+
+        #equipment {
+            color: #868585;
+            letter-spacing: 2px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        #equipment option {
+            color: #000;
+        }
+
+        input::placeholder {
+            color: #a19d9d;
+            letter-spacing: 2px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="wrapper">
+
+        <div class="writing-content">
+            <div class="breadcrumb">
+                <a href="/public/home.html">Home</a>&gt;
+                <a href="#">Future of energy</a>&gt;
+                Hydrogen
+            </div>
+            <span class="hydrogen-title">HYDROGEN</span>
+            <h2>Vanguard of Tomorrow's Energy Revolution</h2>
+            <p class="introduction">In an age of energy challenges and environmental urgency, one element rises to the
+                occasion: hydrogen. Explore its profound potential to reshape our energy landscape and usher in a
+                brighter, cleaner future.
+
+            </p>
+            <g class="introduction">
+                Curiosity piqued? The next chapter of energy awaits your discovery.</g>
+
+            <a class="introduction">
+                <i class="fas fa-smog" style="margin: 20px "></i>
+                Pinpoint and analyze the scale of emission
+                reductions. We're not just talking clean, we're mapping a tangible reduction pathway.
+            </a>
+
+            <a class="introduction">
+                <i class="fas fa-dollar-sign" style="margin: 25px "></i>
+                The math is simple - CUT EMISSIONS, CUT COSTS.
+                Discover the financial benefits awaiting as you evade carbon taxes.
+            </a>
+
+            <a class="introduction">
+                <i class="fas fa-road fa-fw" style="margin: 20px "></i>
+                It's not just a vision, it's a strategic blueprint.
+                Let's chart the course towards energy that's efficient and eco-friendly.
+            </a>
+            <B class="introduction">
+
+                Ready for a game-changer? Share a bit about your project, and let's dive into the potential of hydrogen
+                together, the future is knocking.
+            </B>
+
+            <h3>
+                Are you in?
+
+            </h3>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Unlock Your Potential Savings</h1>
+        <div class="input-section">
+            <label for="equipment">Equipment Type</label>
+            <select id="equipment">
+                <option value="" hidden disabled selected>Select-Device</option>
+                <option value="turbine">Turbine</option>
+                <option value="heater">Heater</option>
+            </select>
+        </div>
+        <div class="input-section">
+            <label for="tax">CO2 Tax Rate</label>
+            <input type="text" id="tax" placeholder="$ CO2 tax rate USD/tonne">
+        </div>
+
+        <div class="input-section">
+            <label for="hours">Annual Operating Hours</label>
+            <input type="text" id="hours" placeholder="expected annual operating hrs">
+        </div>
+        <div class="input-section">
+            <label for="hours">Hourly Volume</label>
+            <input type="text" id="volume" placeholder="Hourly Hoursin m^3/h">
+        </div>
+        <div class="input-section">
+            <label for="hydrogen-volume">How much hydrogen, in terms of volume percentage, do you want to use?</label>
+            <input type="range" min="0" max="100" value="0" step="1" id="hydrogen-volume">
+            <span id="hydrogen-volume-value">0%</span>
+        </div>
+        <div id="results"></div>
+        <button class="calc-btn" id="calc-btn">Start Your Green Transition <i class="fas fa-chevron-right"></i></button>
+    </div>
+    </div>
+    <script>
+        document.querySelector('.calc-btn').addEventListener("click", function (event) {
+            console.log("Button clicked");
+            event.preventDefault();
+            // Retrieve input values
+            let equipmentType = document.getElementById('equipment').value;
+            console.log("Equipment Type:", equipmentType); // Add this line
+            let taxRate = parseFloat(document.getElementById('tax').value);
+            let operatingHours = parseFloat(document.getElementById('hours').value);
+            let hydrogenVolume = parseFloat(document.getElementById('hydrogen-volume').value);
+            let volume = parseFloat(document.getElementById('volume').value)
+            if (isNaN(taxRate) || isNaN(operatingHours) || isNaN(hydrogenVolume)) {
+                alert('Please enter valid numeric values.');
+                return;
+            }
+            switch (equipmentType) {
+                case 'turbine':
+                    calculateForTurbine(taxRate, operatingHours, hydrogenVolume, volume);
+                    break;
+                case 'heater':
+                    calculateForHeater(taxRate, operatingHours, hydrogenVolume, volume);
+                    break;
+                //case 'incinerator':
+                // calculateForIncinerator(taxRate, operatingHours, hydrogenVolume);
+                //break;
+                //case 'flare':
+                //calculateForFlare(taxRate, operatingHours, hydrogenVolume);
+                //break;
+                //default:
+                //alert('Please select a device.');
+            }
+        });
+        function calculateForTurbine(tax, hours, hydrogen, volume) {
+            console.log("Calculating for turbine");
+            let co2 = (((1.705 / 100) * 1 + (72.578 / 100) * 1 + (6.624 / 100) * 2 + (2.434 / 100) * 3 + (1.243 / 100) * 4 + (0.394 / 100) * 5 + (0.189 / 100) * 6 + (0.026 / 100) * 7 + (0.127 / 100) * 8) * 44.01 * volume * 1 / 1000000 * 42.22);
+            let LHV = 33.18;
+            let q = LHV * volume;
+            let vhd = (hydrogen / 100) * volume;
+            let vf = (1 - (hydrogen / 100)) * volume;
+            let q1 = vhd * 12.7 + vf * LHV;
+            let qs = q - q1;
+            let vs = qs / LHV;
+            let vf1 = vs + vf;
+            let vtot = volume + vs;
+            let f = (vs / volume) * 100;
+
+            let prtreduction = hydrogen - f;
+            let crb = ((prtreduction / 100) * co2) * hours;
+            let crbtax = (crb * tax);
+            let em = ((co2 * hours) - crb);
+            let mhd = vhd * 0.08988;
+            let percent = (1 - ((vf + vs) / volume)) * 100;
+            let electricEnergyRequired = (mhd * 55) / (1000 * 24);
+            let eday = electricEnergyRequired * 24;
+            let waterRequired = mhd * 9;
+            let waterRequiredGallons = waterRequired * 0.264172 * 24;
+            let waterRequiredGallonshour = waterRequired * 0.264172;
+            let vhday = vhd * 24;
+            let olym = waterRequiredGallons / 660430;
+            let turnbr = eday / 1.5;
+
+            function formatNumberToK(value) {
+                if (value >= 1000) {
+                    return `$${(value / 1000).toFixed(1)}k`;
+                }
+                return `$${value.toFixed(2)}`;
+            }
+
+            let formattedCrbtax = formatNumberToK(crbtax);
+
+            let resultsData = {
+                percentageReduction: prtreduction.toFixed(1),
+                co2TaxSavings: formattedCrbtax,
+                effectiveEmissionsTonnes: em.toFixed(2),
+                effectiveEmissionsGallons: waterRequiredGallons.toFixed(2),
+                hydrogenpercent: hydrogen,
+                operatinghours: hours,
+                electricalenergyrequired: eday.toFixed(1),
+                percent: percent.toFixed(2),
+                vhd: vhd.toFixed(2),
+                vhday: vhday.toFixed(2),
+                tax: tax.toFixed(2),
+                turbnr: turnbr.toFixed(0)
+            };
+
+            localStorage.setItem('hydrogenResults', JSON.stringify(resultsData));
+            setTimeout(() => {
+                window.location.href = "result.html";
+            }, 2000); // 2 seconds delay
+
+
+        }
+        function calculateForHeater(tax, hours, hydrogen, volume) {
+            console.log("Calculating for heater");
+            let co2 = (((13.58 / 100) * 1 + (35.02 / 100) * 1 + (21.15 / 100) * 2 + (16.62 / 100) * 3 + (8.67 / 100) * 4 + (2.37 / 100) * 5 + (0.55 / 100) * 6 + (0.07 / 100) * 7 + (0.20 / 100) * 8) * 44.01 * volume * 1 / 1000000 * 42.22);
+            let LHV = 54.03;
+            let q = LHV * volume;
+            let vhd = (hydrogen / 100) * volume;
+            let vf = (1 - (hydrogen / 100)) * volume;
+            let q1 = vhd * 12.7 + vf * LHV;
+            let qs = q - q1;
+            let vs = qs / LHV;
+            let vf1 = vs + vf;
+            let vtot = volume + vs;
+            let f = (vs / volume) * 100;
+
+            let prtreduction = hydrogen - f;
+            let crb = ((prtreduction / 100) * co2) * hours;
+            let crbtax = (crb * tax);
+            let em = ((co2 * hours) - crb);
+            let mhd = vhd * 0.08988;
+            let percent = (1 - ((vf + vs) / volume)) * 100;
+            let electricEnergyRequired = (mhd * 55) / (1000 * 24);
+            let eday = electricEnergyRequired * 24;
+            let waterRequired = mhd * 9;
+            let waterRequiredGallons = waterRequired * 0.264172 * 24;
+            let waterRequiredGallonshour = waterRequired * 0.264172;
+            let vhday = vhd * 24;
+            let olym = waterRequiredGallons / 660430;
+            let turnbr = eday / 1.5;
+
+            function formatNumberToK(value) {
+                if (value >= 1000) {
+                    return `$${(value / 1000).toFixed(1)}k`;
+                }
+                return `$${value.toFixed(2)}`;
+            }
+
+            let formattedCrbtax = formatNumberToK(crbtax);
+
+            let resultsData = {
+                percentageReduction: prtreduction.toFixed(1),
+                co2TaxSavings: formattedCrbtax,
+                effectiveEmissionsTonnes: em.toFixed(2),
+                effectiveEmissionsGallons: waterRequiredGallons.toFixed(2),
+                hydrogenpercent: hydrogen,
+                operatinghours: hours,
+                electricalenergyrequired: eday.toFixed(1),
+                percent: percent.toFixed(2),
+                vhd: vhd.toFixed(2),
+                vhday: vhday.toFixed(2),
+                tax: tax.toFixed(2),
+                turbnr: turnbr.toFixed(0)
+
+            };
+            localStorage.setItem('hydrogenResults', JSON.stringify(resultsData));
+            setTimeout(() => {
+                window.location.href = "result.html";
+            }, 2000);
+
+
+        }
+
+
+        //function calculateForIncinerator(tax, hours, hydrogen) {
+        //}
+
+        //function calculateForFlare(tax, hours, hydrogen) {
+        //}
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        document.getElementById("hydrogen-volume").addEventListener("input", function () {
+            document.getElementById("hydrogen-volume-value").textContent = this.value + "%";
+        });
+
+        document.querySelectorAll("input").forEach(input => {
+            input.addEventListener("focus", function () {
+                this.parentNode.style.transform = "scale(1.05)";
+            });
+
+            input.addEventListener("blur", function () {
+                this.parentNode.style.transform = "scale(1)";
+            });
+        });
+
+    </script>
+</body>
+
+</html>

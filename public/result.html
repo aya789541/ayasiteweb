@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" id="divi-style-css"
+        href="https://www.elegantthemes.com/layouts/wp-content/themes/Divi/style-static.min.css?ver=4.22.2"
+        type="text/css" media="all">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="img/bar.png" rel="icon" type="image/png" />
+    <title>Latest News & Upcoming Events</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            /* Removes default margin */
+            padding: 0;
+            /* Removes default padding */
+            background-color: #ffffff;
+            height: 100vh;
+            margin-top: 3%;
+
+        }
+
+        .container {
+            width: 100%;
+            /* Ensures the container takes the full width */
+            max-width: 1500px;
+            /* Container won't exceed this width */
+            margin: 0 auto;
+            /* Centers the container if its width is less than 1500px */
+            padding: 10px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 30px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            letter-spacing: 1.5px;
+            margin-bottom: 50px;
+            color: #000000bd;
+
+
+        }
+
+        .hydrogen-section {
+            margin: 10px 0;
+            padding: 1px 0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .hydrogen-section h2 {
+
+            color: #000000;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            margin-top: 30px;
+
+        }
+
+        .hydrogen-section h3 {
+
+            color: #333333db;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 13px;
+            letter-spacing: 1px;
+
+        }
+
+        .hydrogen-section p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .hydrogen-section b {
+            color: #000000;
+            font-size: 16px;
+        }
+
+
+        .emission-reduction {
+            width: 130px;
+            height: 130px;
+            border: 6px solid #b76e7966;
+            border-radius: 50%;
+            line-height: 130px;
+            font-size: 23px;
+            font-weight: 500;
+            color: #000000d6;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            margin-top: 2%;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 1500px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card {
+            width: 30%;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-weight: 700;
+            font-size: medium;
+            margin: 10px 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            letter-spacing: 2px;
+            color: #000000;
+        }
+
+        .card-date,
+        .card-date1,
+        .card-date2,
+        .card-date3 {
+            color: rgb(49, 49, 49);
+            margin-bottom: 0px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            letter-spacing: 1.2px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .hydrogen-section h2 a {
+            color: #b39397c9;
+            letter-spacing: 1.5px;
+            margin-left: 10px;
+            font-size: 13px;
+        }
+
+        .hydrogen-section h2 a:hover {
+            text-decoration: underline;
+        }
+
+        .aligned-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            /* spacing between the elements */
+        }
+
+        .text-before,
+        .text-after {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            letter-spacing: 1px;
+            text-align: center;
+            margin-bottom: 10px;
+            margin-top: 2%;
+        }
+
+        .et_pb_image_0 .et_pb_image_wrap {
+            border-radius: 0 10px 0 0;
+            overflow: hidden;
+
+        }
+
+        .et_pb_image_0 {
+            max-width: 80%;
+            text-align: left;
+            margin-left: 0;
+        }
+
+        .et_pb_image_1 .et_pb_image_wrap {
+            border-radius: 0 0 0 10px;
+            overflow: hidden;
+            box-shadow: 0px 32px 200px -16px rgba(85, 103, 127, 0.3);
+        }
+
+        .et_pb_image_1 {
+            margin-top: -30% !important;
+            max-width: 70%;
+            text-align: right;
+            margin-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Your Action Decoded: The Hydrogen & CO2 Footprint You've Crafted</div>
+        <!-- Emission Section -->
+        <div class="hydrogen-section">
+            <h2>Voila! The masterpiece forged by your choices. Your turbine, clocking X hours with a X hydrogen
+                twist and a CO2 tax touch of X. <a href="hydrogenone.html">Want changes?</a></h2>
+            <div class="aligned-content">
+                <b class="text-before">Cutting Carbon,By</b>
+                <div class="emission-reduction">%</div>
+                <b class="text-after">and Rising!</b>
+            </div>
+            <h2>Your annual carbon emissions are projected to be X metric tons of CO2</h2>
+        </div>
+
+        <div class="cards">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="img/vol.avif" alt="Image description">
+                <div class="card-content">
+                    <div class="card-title">Natural Gas Volume Saved</div>
+                    <div class="card-date">Switching to hydrogen has saved XX of natural gas volume</div>
+                    <p></p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="img/green-hydrogen.jpg" alt="Image description">
+                <div class="card-content">
+                    <div class="card-title">Amount Of Hydrogen Created</div>
+                    <div class="card-date1"> Cubic meters per hour </div>
+                    <div class="card-date2"> Cubic meters per day</div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="img/pp.avif" alt="Image description">
+                <div class="card-content">
+                    <div class="card-title">CO2 TAX SAVINGS</div>
+                    <div class="card-date3">You've achieved a monumental CO2 tax savings of up to X, underscoring
+                        your commitment to fiscal efficiency and environmental stewardship</div>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="et_builder_inner_content et_pb_gutters3">
+            <div class="et_pb_section et_pb_section_1 et_section_regular">
+                <div class="et_pb_row et_pb_row_2 et_hover_enabled">
+                    <div class="et_pb_column et_pb_column_1_2 et_pb_column_4  et_pb_css_mix_blend_mode_passthrough">
+                        <div class="et_pb_module et_pb_image et_pb_image_0 et-animated et_had_animation">
+                            <span class="et_pb_image_wrap">
+                                <img decoding="async" width="800" height="600" src="img/energy.avif">
+                            </span>
+                        </div>
+                        <div class="et_pb_module et_pb_image et_pb_image_1 et-animated et_had_animation">
+                            <span class="et_pb_image_wrap has-box-shadow-overlay">
+                                <div class="box-shadow-overlay"></div>
+                                <img decoding="async" width="800" height="225" src="img/px.jpg">
+                            </span>
+                        </div>
+                    </div>
+                    <div
+                        class="et_pb_column et_pb_column_1_2 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                        <div class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_light">
+                            <div class="et_pb_text_inner">
+                                <h2>Infrastructure Requirements</h2>
+                            </div>
+                        </div>
+                        <div class="et_pb_module et_pb_divider et_pb_divider_0 et_pb_divider_position_ et_pb_space">
+                            <div class="et_pb_divider_internal"></div>
+                        </div>
+                        <div class="et_pb_module et_pb_text et_pb_text_5  et_pb_text_align_left et_pb_bg_layout_light">
+                            <div class="et_pb_text_inner">
+                                <p style="font-size: small; letter-spacing: 1px; margin-top: 15%; ">To power your
+                                    envisioned hydrogen infrastructure, imagine
+                                    harnessing the force of X
+                                    wind turbines, each with a capacity of X MW. That's the energy scale we're talking
+                                    about. And as for water? Picture drawing from a vast reservoir daily, tapping into
+                                    X Gallons of water. That's the magnitude of your hydrogen journey ahead
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            window.onload = function () {
+                // Retrieve the stored data from localStorage
+                let resultsData = JSON.parse(localStorage.getItem('hydrogenResults'));
+                console.log(resultsData); // Add this line to see the retrieved data.
+
+                // Check if data exists
+                if (resultsData) {
+                    // Replace the placeholders in the result HTML with actual values
+
+                    document.querySelector(".hydrogen-section h2:nth-of-type(1)").innerText =
+                        `Voila! The masterpiece forged by your choices. Your turbine, clocking ${resultsData.operatinghours} hours with a ${resultsData.hydrogenpercent} % hydrogen twist and a CO2 tax touch of ${resultsData.tax}$/ton.`;
+
+                    document.querySelector(".emission-reduction").innerText =
+                        `${resultsData.percentageReduction}%`;
+
+                    document.querySelector(".hydrogen-section h2:nth-of-type(2)").innerText =
+
+                        `Your annual carbon emissions are projected to be ${resultsData.effectiveEmissionsTonnes} metric tons of CO2`;
+
+
+                    document.querySelector(".card-date").innerText =
+                        `Switching to hydrogen has saved ${resultsData.percent}% of natural gas volume`;
+
+                    let element = document.querySelector(".card-date1").innerText =
+
+                        ` ${resultsData.vhd} Cubic meters per hour `;
+
+                    document.querySelector(".card-date2").innerText =
+                        ` ${resultsData.vhday} Cubic meters per day `;
+
+                    document.querySelector(".card-date3").innerText =
+                        `You've achieved a monumental CO2 tax savings of up to ${resultsData.co2TaxSavings}, underscoring
+                    your commitment to fiscal efficiency and environmental stewardship`;
+
+                    document.querySelector(".et_pb_text_inner p").innerText =
+                        `To power your envisioned hydrogen infrastructure, imagine harnessing the force of ${resultsData.turbnr} wind turbines, each with a capacity of ${resultsData.electricalenergyrequired} MW. That's the energy scale we're talking about. And as for water? Picture drawing from a vast reservoir daily, tapping into ${resultsData.effectiveEmissionsGallons} gallons of water. That's the magnitude of your hydrogen journey ahead`;
+                }
+            }
+        </script>
+</body>
+
+</html>

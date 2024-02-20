@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="google" value="notranslate" />
+    <link href="img/bar.png" rel="icon" type="image/png" />
+    <title>Glassmorphism | Login Form</title>
+
+    <link rel="stylesheet prefetch" href="https://preview.codepad.co/css/normalize.min.css" />
+
+    <style type="text/css">
+        @import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background:
+                linear-gradient(-45deg, rgba(235, 235, 235, 0.3), rgba(215, 215, 215, 0.3)),
+                url('img/plan.avif') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        img {
+            width: 32px;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+
+            background: linear-gradient(-90deg, #ebebeb6f, #d1d1d108, #ffffff91, #c4c4c400);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .box {
+            position: relative;
+        }
+
+        .box .square {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0);
+            border-radius: 15px;
+            animation: square 10s linear infinite;
+            animation-delay: calc(-1s * var(--i));
+        }
+
+        @keyframes square {
+
+            0%,
+            100% {
+                transform: translateY(-20px);
+            }
+
+            50% {
+                transform: translateY(20px);
+            }
+        }
+
+        .box .square:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: -15px;
+            right: -45px;
+        }
+
+        .box .square:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            top: 105px;
+            left: -125px;
+            z-index: 2;
+        }
+
+        .box .square:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            bottom: 85px;
+            right: -45px;
+            z-index: 2;
+        }
+
+        .box .square:nth-child(4) {
+            width: 50px;
+            height: 50px;
+            bottom: 35px;
+            left: -95px;
+        }
+
+        .box .square:nth-child(5) {
+            width: 50px;
+            height: 50px;
+            top: -15px;
+            left: -25px;
+        }
+
+        .box .square:nth-child(6) {
+            width: 85px;
+            height: 85px;
+            top: 165px;
+            right: -155px;
+            z-index: 2;
+        }
+
+        .container {
+            position: relative;
+            padding: 50px;
+            width: 650px;
+            min-height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffffffe0;
+            /* Changed this to white */
+            border-radius: 10px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+        }
+
+        .container::after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            bottom: 5px;
+            left: 5px;
+            border-radius: 5px;
+            pointer-events: none;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 2%);
+        }
+
+        .form {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .form h2 {
+            font-size: 200%;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 0px;
+            color: #6b5d57;
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            /* A soft blue for contrast */
+        }
+
+        .form h3 {
+            font-size: 400%;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 60px;
+            color: #6b5d57;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* A soft blue for contrast */
+        }
+
+        .form .inputBx {
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form .inputBx input {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            letter-spacing: 1.5px;
+            width: 100%;
+            outline: none;
+            border: none;
+            border: 1px solid rgba(0, 0, 0, 0.133);
+            /* Darker border for visibility against white */
+            background: #f3f3f3;
+            /* Light Gray */
+            /* Light gray background for visibility */
+            padding: 8px 10px;
+            padding-left: 40px;
+            border-radius: 15px;
+            background: #d8e2d500;
+            /* Light Green-Gray */
+            /* Black color text for visibility */
+            font-size: 17px;
+            font-weight: 400;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+
+        .form .inputBx .password-control {
+            position: absolute;
+            top: 11px;
+            right: 10px;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat;
+            transition: 0.5s;
+        }
+
+        .form .inputBx .view {
+            background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+            transition: 0.5s;
+        }
+
+        .form .inputBx img {
+            position: absolute;
+            top: 6px;
+            left: 8px;
+            transform: scale(0.6);
+            filter: invert(1);
+        }
+
+        .form .inputBx input[type=submit] {
+
+            max-width: 100px;
+            padding: 8px 10px;
+            box-shadow: #d9c293;
+            border-color: #d9c29300;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: 0.5s;
+            background: #594d49b3;
+            /* Deep Gray */
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            letter-spacing: 3px;
+            font-weight: 600;
+            font-size: small;
+
+        }
+
+        .form .inputBx input[type=submit]:hover {
+            transition: 0.5s;
+            background: #777;
+            /* Lighter Gray */
+            color: #ffffff;
+        }
+
+        .form .inputBx input::placeholder {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            letter-spacing: 2px;
+            color: #0d0d0d;
+            /* Gray color placeholder for visibility */
+        }
+
+        .form .inputBx span {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            letter-spacing: 2.4px;
+            position: absolute;
+            left: 30px;
+            padding: 10px;
+            display: inline-block;
+            color: #595353aa;
+            transition: 0.5s;
+            pointer-events: none;
+            font-size: 80%;
+            font-weight: 500;
+        }
+
+        .form .inputBx input:focus~span,
+        .form .inputBx input:valid~span {
+            transform: translateX(-30px) translateY(-25px);
+            font-size: 12px;
+        }
+
+        .form p {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            letter-spacing: 2px;
+            color: #666;
+            /* Medium Gray tone */
+            font-size: 15px;
+            margin-top: 5px;
+            font-size: 80%;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form p a {
+            color: #555;
+            /* Deep Gray */
+            margin-left: 15px;
+        }
+
+        .form p a:hover {
+            background-image: linear-gradient(to right, #cac0c0, rgb(17, 17, 17));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .remember {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+            color: #666;
+            /* Medium Gray tone */
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-size: 70%;
+            font-weight: 500;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+
+        <div class="box">
+
+            <div class="square" style="--i:0;"></div>
+            <div class="square" style="--i:1;"></div>
+            <div class="square" style="--i:2;"></div>
+            <div class="square" style="--i:3;"></div>
+            <div class="square" style="--i:4;"></div>
+            <div class="square" style="--i:5;"></div>
+
+            <div class="container">
+                <div class="form">
+                    <h2>Shape Tomorrow,</h2>
+                    <h3>Today!</h3>
+                    <form id="signupForm" action="">
+                        <div class="inputBx">
+                            <input type="text" id="firstName" required="required">
+                            <span>First Name</span>
+                        </div>
+                        <div class="inputBx">
+                            <input type="text" id="lastName" required="required">
+                            <span>Last Name</span>
+                        </div>
+                        <div class="inputBx">
+                            <input type="text" id="email" required="required">
+                            <span>Email</span>
+                        </div>
+                        <div class="inputBx password">
+                            <input id="password-input" type="password" name="password" required="required">
+                            <span>Password</span>
+                            <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+                        </div>
+
+
+                        <div class="inputBx">
+                            <input type="submit" value="Sign up">
+                        </div>
+                    </form>
+
+                    <p>Already have an account? <a href="signin.html">Login</a></p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        function show_hide_password(target) {
+            var input = document.getElementById('password-input');
+            if (input.getAttribute('type') == 'password') {
+                target.classList.add('view');
+                input.setAttribute('type', 'text');
+            } else {
+                target.classList.remove('view');
+                input.setAttribute('type', 'password');
+            }
+            return false;
+        }
+
+        document.getElementById('signupForm').addEventListener('submit', function (event) {
+            console.log("Form submitted.");
+            event.preventDefault();
+
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password-input').value;
+
+            fetch('/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ firstName, lastName, email, password }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        window.location.href = '/signin';
+                    } else if (data.message === 'Email already registered.') {
+                        alert('Compte existant! Veuillez vous connecter.');
+                    } else {
+                        alert('Error signing up. Please try again.');
+                    }
+                });
+        });
+
+    </script>
+</body>
+
+</html>

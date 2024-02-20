@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="img/bar.png" rel="icon" type="image/png" />
+
+
+
+
+    <title>Document</title>
+
+    <style>
+        body {
+            background-image: url('');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+
+        }
+
+
+        table.table {
+            background-color: rgba(255, 255, 255, 0);
+            max-width: 100%;
+        }
+
+        table.table-dark {
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        table.table td,
+        table.table th {
+            background-color: rgba(255, 255, 255, 0);
+
+        }
+
+        table.table-dark td,
+        table.table-dark th {
+            background-color: rgba(255, 255, 255, 0);
+
+        }
+
+        .table {
+            margin-bottom: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5px;
+            width: 10rem;
+            border-color: rgba(0, 0, 0, 0);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .table-dark th {
+            font-size: 1.5rem;
+        }
+
+        .table td,
+        .table th {
+            padding: 8px 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0);
+
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + .75rem + 2px);
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            border-color: rgba(0, 0, 0, 0.192);
+        }
+
+        .ghg-table-header th {
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: ui-sans-serif;
+            border-color: rgb(0, 0, 0);
+            width: 40rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5px;
+            max-height: 5%;
+        }
+
+        .btn-custom {
+            display: inline-block;
+            background-color: #0569fc;
+            color: #FFF;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.3s;
+            font-family: ui-sans-serif;
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 12px;
+        }
+
+        .btn-custom:hover {
+            background-color: hsla(322, 47%, 77%, 0.6);
+            color: #000;
+            cursor: pointer;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 15px;
+
+        }
+
+        .modal-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: 80%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+
+        .modal-content {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.715);
+            /* a slight shadow for depth */
+            margin-top: 0%;
+        }
+
+
+        .modal-content label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .modal-content input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+
+        .modal-content button {
+            padding: 10px 20px;
+            background-color: rgba(186, 105, 156, 0.689);
+            ;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            /* Make text bold */
+            letter-spacing: 1px;
+            /* Add letter spacing */
+        }
+
+        .modal-content button:hover {
+            background-color: rgba(186, 105, 156);
+        }
+
+        #submissionMessage {
+            color: red;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        body,
+        html,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            background-color: #FFFFFF !important;
+            font-family: ui-sans-serif;
+        }
+
+        .table td,
+        .table th {
+            padding: 8px 15px;
+            border-bottom: 1px solid #fff;
+        }
+
+        .table-striped>tbody>tr:nth-of-type(odd)>* {
+            --bs-table-color-type: var(--bs-table-striped-color);
+            --bs-table-bg-type: rgb(255 255 255 / 5%);
+        }
+
+        .breadcrumb {
+            font-family: ui-sans-serif;
+            font-size: 12px;
+            color: #666;
+            padding: 20px 30px;
+            letter-spacing: 2.5px;
+            font-weight: 600;
+        }
+
+        .breadcrumb a {
+            color: #3379b7ce;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            margin-bottom: 30px;
+
+        }
+
+        .shadow-box {
+            padding: 20px;
+            background-color: #fff;
+            /* Assuming you want a white background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.575);
+            border-radius: 50px;
+            /* Optional: for rounded corners */
+        }
+
+        .section-content {
+            display: none;
+        }
+
+        .checkmark {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            /* Circle shape */
+            position: relative;
+            border: 2px solid transparent;
+            /* Will be filled by gradient */
+            background-image: linear-gradient(white, white), linear-gradient(to right, #007BFF, #00FFC8);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            transition: transform 0.2s ease;
+            /* smoothens hover effect */
+        }
+
+        .checkmark::after {
+            content: '\2714';
+            /* Unicode check character */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #007BFF;
+            /* color of check */
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Hover effect */
+        .checkmark:hover {
+            transform: scale(1.1);
+            /* enlarges a bit on hover */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            /* subtle shadow */
+        }
+
+        .arrow {
+            display: inline-block;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+            /* Smoothens the rotation */
+            color: #007BFF;
+            font-size: 10px;
+
+        }
+
+        .section-header.expanded .arrow {
+            transform: rotate(90deg);
+            /* Rotate arrow when section is expanded */
+        }
+
+        #resultsTable {
+            opacity: 0;
+            /* Initially hidden */
+            transition: opacity 1s;
+            /* 1 second transition for the opacity */
+        }
+
+        #resultsTable.shown {
+            opacity: 1;
+            /* Fully visible */
+        }
+
+
+        .percentage-circle-container {
+            position: absolute;
+            /* Added */
+            bottom: 350px;
+            /* Adjust as needed */
+            right: 300px;
+            /* Adjust as needed */
+            width: 100px;
+            height: 100px;
+            z-index: 20;
+            /* Adjust if necessary */
+        }
+
+
+        .percentage-circle {
+            position: relative;
+            width: 200%;
+            height: 200%;
+        }
+
+        .circle-background,
+        .circle-foreground {
+            position: absolute;
+            top: -70%;
+            left: -70%;
+            width: 200%;
+            height: 200%;
+            transform: rotate(-90deg);
+            /* Start the circle from the top */
+
+        }
+
+        .circle-foreground circle {
+            transition: stroke-dashoffset 0.5s ease-out;
+            /* Adjust time as desired */
+        }
+
+
+        .percentage-text {
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Update this based on the actual percentage you want */
+        .circle-foreground circle {
+            stroke-dashoffset: calc(283 - (283 * 0.5));
+        }
+
+        .results-container {
+            position: relative;
+            width: 90%;
+            margin: 0 auto;
+            box-shadow: 0px 4px 8px rgba(0, 30, 255, 0.537);
+            border-radius: 60px;
+            padding: 40px;
+            background-color: #fff;
+            transition: box-shadow 0.3s ease;
+            margin-bottom: 20px;
+
+        }
+
+        .results-container:hover {
+            box-shadow: 0px 6px 12px rgba(0, 30, 255, 0.544);
+        }
+
+        .circle-percentage {
+            width: 2000px;
+            height: 2000px;
+            border-radius: 50%;
+            background-color: #e9e9e9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="breadcrumb">
+        <a href="/home">Home</a> &gt;
+        <a href="/energypath">Energy Path</a> &gt;
+        H-203
+    </div>
+
+    <div class="container shadow-box">
+        <form id="myForm">
+            <table class="table table-striped ghg-table "
+                style="background-color: #ffffff00; width: 100%; margin-top: 20px; margin-bottom: 30px;"
+                style="margin-left:auto;margin-right: auto; width: 100rem ; border-color:rgb(0, 0, 0);max-height: 1%; ">
+                <thead>
+                    <tr>
+                        <th scope="col"
+                            style="text-align: center; font-size: 2rem;  font-family: ui-sans-serif; letter-spacing: 7px; font-weight: 400px; ">
+                            ENERGY
+                            EFFICIENCY</th>
+                    </tr>
+                </thead>
+            </table>
+
+            <table class="table table-striped project-table"
+                style="margin-left:auto;margin-right: auto;margin-top: 3px; width:60rem ; border-color:rgb(255, 255, 255); margin-bottom: 10px; max-height: 5%;">
+                <thead class="table-dark">
+
+                    <tr>
+                        <th scope="col"
+                            style="font-size: 1.3rem; background-color: hsl(0, 0%, 100%); color: black;letter-spacing: 3px;">
+                            PROJECT</th>
+                        <th scope="col" style="background-color: hsl(0, 0%, 100%)"></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td scope="row">Project Title</td>
+                        <td>
+                            <div class="input-group mb-3"><input type="text" id="projecttitle" class="form-control">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td scope="row">Date </td>
+                        <td>
+                            <div class="input-group mb-3"><input type="date" id="date" class="form-control"></div>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <table class="table table-striped input-table"
+                style="margin-left:auto;margin-right: auto;margin-top: 5px; width:60rem ; border-color:black; ">
+                <thead class="table-dark">
+
+                    <tr>
+                        <th scope="col"
+                            style="font-size: 1.3rem; background-color: hsla(322, 37%, 87%, 0.5); color: black;letter-spacing: 3px; ">
+                            INPUTS</th>
+                        <th style=" background-color: hsla(322, 37%, 87%, 0.5);"></th>
+                        <th style=" background-color: hsla(322, 37%, 87%, 0.5);"></th>
+                        <th style=" background-color: hsla(322, 37%, 87%, 0.5);"></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr class="section-header">
+                        <th scope="col" style="font-size: 0.95rem; letter-spacing: 1.5px;"
+                            onclick="toggleSection(this)">
+                            Conditions
+                            <span class="arrow">&#x25B6;</span>
+                            <span class="checkmark" style="color: blue; display: none;">✓</span>
+                        </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+
+                    <tr class="section-content">
+                        <td scope="row">Air Temperature</td>
+                        <td>
+                            <div class="input-group mb-3"><input type="text" id="tair" placeholder="0"
+                                    class="form-control">°C </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row">Excess Air</td>
+                        <td>
+                            <div class="input-group mb-3"><input type="text" id="air" placeholder="0"
+                                    class="form-control">%
+                            </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row">Relative Humidity</td>
+                        <td>
+                            <div class="input-group mb-3"><input type="text" id="humidity" placeholder="0"
+                                    class="form-control">% </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row">Heat Losses</td>
+                        <td>
+                            <div class="input-group mb-3"><input type="text" id="loss" placeholder="0"
+                                    class="form-control">% </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="section-header">
+                        <th scope="col" style="font-size: 0.95rem; letter-spacing: 1.5px;"
+                            onclick="toggleSection(this)">
+                            Fuel Gas
+                            <span class="arrow">&#x25B6;</span>
+                            <span class="checkmark" style=" display: none;">✓</span>
+                        </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row"> Volume Flow</td>
+                        <td>V</td>
+                        <td>m^3/h</td>
+                        <td><input type="text" id="volume" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row"> Pressure</td>
+                        <td>P</td>
+                        <td>bar</td>
+                        <td><input type="text" id="pressure" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row"> Temperature</td>
+                        <td>Tf</td>
+                        <td>°C</td>
+                        <td><input type="text" id="temperature" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row"> HHV</td>
+                        <td>HHV</td>
+                        <td>MJ/m^3</td>
+                        <td><input type="text" id="HHV" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row"> LHV</td>
+                        <td>LHV</td>
+                        <td>MJ/m^3</td>
+                        <td><input type="text" id="LHV" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-content">
+                        <th scope="row" style="letter-spacing: 1.5px;"> Component</th>
+                        <th>Formula</th>
+                        <th>Mol.Wt.</th>
+                        <th>Mole %</th>
+                    </tr>
+
+                    <tr class="section-content">
+                        <td scope="row">Carbon Dioxide</td>
+                        <td> CO2</td>
+                        <td> 44.01</td>
+                        <td><input type="text" id="carbonDioxide" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row"> Nitrogen</td>
+                        <td> N2</td>
+                        <td>28.02</td>
+                        <td><input type="text" id="Nitro" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row"> Hydrogensulfide</td>
+                        <td>H₂S</td>
+                        <td>34.08</td>
+                        <td><input type="text" id="hydrogensulfide" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-content">
+
+                        <td scope="row">Methane</td>
+                        <td> CH4</td>
+                        <td> 16.05</td>
+                        <td><input type="text" id="methane" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row"> Ethane</td>
+                        <td>C2H6</td>
+                        <td>30.07</td>
+                        <td><input type="text" id="ethane" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row">Propane</td>
+                        <td>C3H8</td>
+                        <td>44.1</td>
+                        <td><input type="text" id="propane" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row">Butane</td>
+                        <td>C4H10</td>
+                        <td>58.12</td>
+                        <td><input type="text" id="butane" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row"> Pentane</td>
+                        <td>C5H12</td>
+                        <td>72.5</td>
+                        <td><input type="text" id="pentane" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row"> Hexane</td>
+                        <td> C6H14</td>
+                        <td>86.18</td>
+                        <td><input type="text" id="hexane" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row">Heptane</td>
+                        <td>C7H16</td>
+                        <td>100.21</td>
+                        <td><input type="text" id="heptane" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row">Octane</td>
+                        <td>C8H18</td>
+                        <td>114.23</td>
+                        <td><input type="text" id="octane" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-header">
+                        <th scope="col" style="font-size: 0.95rem; letter-spacing: 1.5px;"
+                            onclick="toggleSection(this)">
+                            Flue Gases
+                            <span class="arrow">&#x25B6;</span>
+                            <span class="checkmark" style="color: blue; display: none;">✓</span>
+                        </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row"> Stack Temperature</td>
+                        <td> Ts</td>
+                        <td>°c</td>
+                        <td><input type="text" id="tstack" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-header">
+                        <th scope="col" style="font-size: 0.95rem; letter-spacing: 1.5px;"
+                            onclick="toggleSection(this)">
+                            Condensate
+                            <span class="arrow">&#x25B6;</span>
+                            <span class="checkmark" style="color: blue; display: none;">✓</span>
+                        </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row"> Inlet Temperature</td>
+                        <td>Tin</td>
+                        <td>°c</td>
+                        <td><input type="text" id="tin" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row"> Presure</td>
+                        <td>P</td>
+                        <td>bar</td>
+                        <td><input type="text" id="pcon" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-content">
+                        <td scope="row"> Volume Flow</td>
+                        <td>V</td>
+                        <td>m^3</td>
+                        <td><input type="text" id="v" placeholder="0" class="form-control"></td>
+                    </tr>
+                    <tr class="section-content">
+                        <th scope="row" style="letter-spacing: 1.5px;">Composition</th>
+                        <td>
+                            <select name="compositionChoice" id="compositionChoice"
+                                onchange="handleCompositionChange()">
+                                <option value="default">Use Default Composition</option>
+                                <option value="custom">Add Custom Composition</option>
+                            </select>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <!-- Composition Modal -->
+                    <div id="compositionModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" id="closeButton">&times;</span>
+                            <h2>Enter Custom Composition</h2>
+
+                            <form id="compositionForm" action="/Hcalcul" method="post">
+                                <input type="hidden" id="compositionType" name="compositionType" value="default">
+                                <!-- Input Data -->
+                                <label for="methane">Methane (wt%)</label>
+                                <input type="text" id="c1" placeholder="0">
+                                <label for="ethane">Ethane (wt%)</label>
+                                <input type="text" id="c2" placeholder="0">
+                                <label for="propane">Propane (wt%)</label>
+                                <input type="text" id="c3" placeholder="0">
+                                <label for="ibutane">i-Butane (wt%)</label>
+                                <input type="text" id="ic4" placeholder="0">
+                                <label for="nbutane">n-Butane (wt%)</label>
+                                <input type="text" id="nc4" placeholder="0">
+                                <label for="ipentane">i-Pentane (wt%)</label>
+                                <input type="text" id="ic5" placeholder="0">
+                                <label for="npentane">n-Pentane (wt%)</label>
+                                <input type="text" id="nc5" placeholder="0">
+                                <label for="nHexane">n-Hexane (wt%)</label>
+                                <input type="text" id="nc6" placeholder="0">
+                                <label for="nHeptane">n-Heptane (wt%)</label>
+                                <input type="text" id="nc7" placeholder="0">
+                                <label for="nOctane">n-Octane (wt%)</label>
+                                <input type="text" id="nc8" placeholder="0">
+                                <label for="nNonane">n-Nonane (wt%)</label>
+                                <input type="text" id="nc9" placeholder="0">
+                                <label for="nDecane">n-Decane (wt%)</label>
+                                <input type="text" id="nc10" placeholder="0">
+                                <label for="nC11">n-C11 (wt%)</label>
+                                <input type="text" id="nc11" placeholder="0">
+                                <label for="nC12">n-C12 (wt%)</label>
+                                <input type="text" id="nc12" placeholder="0">
+                                <label for="nC13">n-C13 (wt%)</label>
+                                <input type="text" id="nc13" placeholder="0">
+                                <label for="nC14">n-C14 (wt%)</label>
+                                <input type="text" id="nc14" placeholder="0">
+                                <label for="nC15">n-C15 (wt%)</label>
+                                <input type="text" id="nc15" placeholder="0">
+                                <label for="nC16">n-C16 (wt%)</label>
+                                <input type="text" id="nc16" placeholder="0">
+                                <label for="nC17">n-C17 (wt%)</label>
+                                <input type="text" id="nc17" placeholder="0">
+                                <label for="nC18">n-C18 (wt%)</label>
+                                <input type="text" id="nc18" placeholder="0">
+                                <label for="nC19">n-C19 (wt%)</label>
+                                <input type="text" id="nc19" placeholder="0">
+                                <label for="nC20">n-C20 (wt%)</label>
+                                <input type="text" id="nc20" placeholder="0">
+                                <label for="nC21">n-C21 (wt%)</label>
+                                <input type="text" id="nc21" placeholder="0">
+                                <label for="nC22">n-C22 (wt%)</label>
+                                <input type="text" id="nc22" placeholder="0">
+                                <label for="nC23">n-C23 (wt%)</label>
+                                <input type="text" id="nc23" placeholder="0">
+                                <label for="nC24">n-C24 (wt%)</label>
+                                <input type="text" id="nc24" placeholder="0">
+                                <label for="nC25">n-C25 (wt%)</label>
+                                <input type="text" id="nc25" placeholder="0">
+                                <label for="nC26">n-C26 (wt%)</label>
+                                <input type="text" id="nc26" placeholder="0">
+                                <label for="nC27">n-C27 (wt%)</label>
+                                <input type="text" id="nc27" placeholder="0">
+                                <label for="nC28">n-C28 (wt%)</label>
+                                <input type="text" id="nc28" placeholder="0">
+                                <label for="nC29">n-C29 (wt%)</label>
+                                <input type="text" id="nc29" placeholder="0">
+                                <label for="nC30">n-C30 (wt%)</label>
+                                <input type="text" id="nc30" placeholder="0">
+                                <label for="benzene">Benzene (wt%)</label>
+                                <input type="text" id="benzene" placeholder="0">
+                                <label for="toluene">Toluene (wt%)</label>
+                                <input type="text" id="toluene" placeholder="0">
+                                <label for="oXylene">o-Xylene (wt%)</label>
+                                <input type="text" id="oxylene" placeholder="0">
+                                <label for="mXylene">m-Xylene (wt%)</label>
+                                <input type="text" id="mxylene" placeholder="0">
+                                <label for="22Mpropane">22-Mpropane (wt%)</label>
+                                <input type="text" id="m22propane" placeholder="0">
+                                <label for="h2s">H2S (wt%)</label>
+                                <input type="text" id="hydrosulfid" placeholder="0">
+                                <label for="co2">CO2 (wt%)</label>
+                                <input type="text" id="ox" placeholder="0">
+                                <label for="nitrogen">Nitrogen (wt%)</label>
+                                <input type="text" id="nitrogene" placeholder="0">
+                                <label for="eBenzene">E-Benzene (wt%)</label>
+                                <input type="text" id="ebenzene" placeholder="0">
+                                <button id="modalSubmitButton">Submit</button>
+                                <div id="submissionMessage"></div>
+                            </form>
+                        </div>
+                    </div>
+                </tbody>
+            </table>
+            <div class="button-container text-center mt-5">
+                <button type="button" onclick="showResultsTableAndCircle(); Hcalcul();"
+                    class="btn-custom">CALCULATE</button>
+                <button id="exportToExcel" class="btn btn-custom">EXPORT To EXCEL</button>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.5/xlsx.full.min.js"></script>
+            </div>
+        </form>
+    </div>
+    <div class="results-container d-none"
+        style="display: flex; justify-content: space-between; align-items: start; margin-top: 5rem; ">
+
+        <table id="resultsTable" class="table table-striped results-table"
+            style="margin-left:20px; border-color:black; width: 50%;">
+            <thead class="table-dark">
+
+                <tr>
+                    <th scope="col"
+                        style="font-size: 1.3rem; background-color: hsla(322, 37%, 87%, 0.5); color: black; letter-spacing: 3px; ">
+                        Results</th>
+                    <th scope="col" style=" background-color: hsla(322, 37%, 87%, 0.5);"></th>
+                    <th scope="col" style=" background-color: hsla(322, 37%, 87%, 0.5);"></th>
+                    <th scope="col" style=" background-color: hsla(322, 37%, 87%, 0.5);"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="resultRows" style="letter-spacing: 1.5px;"> Air</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td scope="resultRows"> Air Flow Rate</td>
+                    <td>Ma</td>
+                    <td>Kmol/h</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row" style="letter-spacing: 1.5px;"> Fuel Gas</th>
+                    <th>Formula</th>
+                    <th>Unit</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td scope="row"> Flow Rate</td>
+                    <td>M</td>
+                    <td>Kmol/h</td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td scope="row"> Net Calorific Value</td>
+                    <td>NCV</td>
+                    <td>KJ/Kmol</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row" style="font-size: 0.95rem; letter-spacing: 1.5px;">Flue Gases</th>
+                    <th>Formula</th>
+                    <th>Unit</th>
+                    <th></th>
+                </tr>
+
+                <td scope="row"> Flow rate</td>
+                <td>Mg</td>
+                <td>Kmol/h</td>
+                <td></td>
+                </tr>
+                <tr>
+                    <th scope="row"> Thermal Performance</th>
+                    <th>Formula</th>
+                    <th>Unit</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td scope="row"> Heat Value of Fuel</td>
+                    <td>Qv</td>
+                    <td>KJ/h</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td scope="row"> Sensible Heat of Fuel</td>
+                    <td>Qs</td>
+                    <td>KJ/h</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td scope="row"> Sensible Heat of Air</td>
+                    <td>Qa</td>
+                    <td>KJ/h</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td scope="row"> Sensible Heat of Combustion Air</td>
+                    <td>Qstack</td>
+                    <td>KJ/h</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td scope="row"> Heat Losses</td>
+                    <td>Ql</td>
+                    <td>KJ/h</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td scope="row"> Energy Output</td>
+                    <td>Qout</td>
+                    <td>KJ/h</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td scope="row"> Useful Energy </td>
+                    <td>Qu</td>
+                    <td>KJ/h</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td scope="row"> Thermal Efficiency </td>
+                    <td>E</td>
+                    <td>%</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td scope="row"> Condensate Outlet Temperature</td>
+                    <td>Tout</td>
+                    <td>°c</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="percentage-circle-container">
+            <div class="percentage-circle">
+                <!-- Background Circle - static gray circle that doesn't change -->
+                <svg class="circle-background" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="#e6e6e6" stroke-width="10"></circle>
+                </svg>
+
+                <!-- Foreground Circle - dynamic circle that starts at 0% -->
+                <svg class="circle-foreground" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="#3498db" stroke-width="10" stroke-dasharray="283"
+                        stroke-dashoffset="283"></circle>
+                </svg>
+
+                <!-- Text in the center of the circle to display the percentage -->
+                <div class="percentage-text">0%</div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+
+        function toggleSection(element) {
+            let content = element.parentElement.nextElementSibling;
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "table-row-group"; // or whatever your show display style is
+                element.classList.add('expanded'); // Add the expanded class
+            } else {
+                content.style.display = "none";
+                element.classList.remove('expanded'); // Remove the expanded class
+            }
+            checkCompletionStatus(element);
+        }
+
+
+        function toggleSection(element) {
+            let nextRow = element.parentElement.nextElementSibling;
+
+            // Toggle the display of the content rows
+            while (nextRow && nextRow.classList.contains('section-content')) {
+                if (nextRow.style.display === "none" || !nextRow.style.display) {
+                    nextRow.style.display = "table-row";
+                } else {
+                    nextRow.style.display = "none";
+                }
+                nextRow = nextRow.nextElementSibling;
+            }
+
+            // If we're hiding the rows, check if all fields in this section are filled
+            if (element.parentElement.nextElementSibling.style.display === "none") {
+                let inputs = element.parentElement.parentElement.querySelectorAll('.section-content input');
+                let allFilled = true;
+                for (let input of inputs) {
+                    if (input.value.trim() === '') {
+                        allFilled = false;
+                        break;
+                    }
+                }
+
+                // If all fields are filled, show the checkmark
+                if (allFilled) {
+                    element.querySelector('.checkmark').style.display = 'inline';
+                } else {
+                    element.querySelector('.checkmark').style.display = 'none';
+                }
+            }
+        }
+
+        function showResultsTableAndCircle() {
+            var resultsContainer = document.querySelector('.results-container');
+            var resultsTable = document.getElementById('resultsTable');
+
+            // First, make the container (which holds the table and circle) visible (but still with 0 opacity)
+            resultsContainer.classList.remove('d-none');
+
+            // Wait for the next frame so that removing 'd-none' is rendered, then add the 'shown' class to start the opacity transition for the table
+            requestAnimationFrame(() => {
+                resultsTable.classList.add('shown');
+
+                // Smoothly scroll to the resultsContainer
+                resultsContainer.scrollIntoView({ behavior: "smooth" });
+            });
+        }
+        function setCirclePercentage() {
+            // Fetch the efficiency value from the table
+            const efficiencyValue = parseFloat(document.querySelectorAll('.table-striped tbody')[2].querySelectorAll('tr')[15].querySelectorAll('td')[3].textContent);
+
+            // Update the text inside the circle
+            const percentageText = document.querySelector('.percentage-text');
+            percentageText.textContent = efficiencyValue.toFixed(2) + '%';
+
+            // Calculate the stroke-dashoffset based on the efficiency value
+            const RADIUS = 45;  // Circle radius
+            const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
+            const offset = CIRCUMFERENCE * (1 - efficiencyValue / 100);
+
+            // Set the stroke-dashoffset to the circle
+            const foregroundCircle = document.querySelector('.circle-foreground circle');
+            foregroundCircle.style.strokeDashoffset = offset;
+        }
+
+        // Call the function to set the circle's value according to the efficiency
+        setCirclePercentage();
+
+
+        function generateExcelData() {
+            let wb = XLSX.utils.book_new();
+            let ws_name = "SheetJS";
+            // Create an empty array for the Excel data.
+            let ws_data = [];
+            // Get the project title and date from their respective fields and push them to our data array.
+            let projectTitleValue = document.querySelector('#projecttitle').value;
+            let projectDateValue = document.querySelector('#date').value;
+            ws_data.push(["Project Title", projectTitleValue]);
+            ws_data.push(["Date", projectDateValue]);
+            // Function to process each table row and extract data.
+            function processRows(rows) {
+                rows.forEach(row => {
+                    let data = [];
+                    row.querySelectorAll('td, th').forEach(cell => {
+                        if (cell.querySelector('input')) {
+                            data.push(cell.querySelector('input').value);
+                        } else {
+                            data.push(cell.textContent.trim());
+                        }
+                    });
+                    ws_data.push(data);
+                });
+            }
+            // Process the input table.
+            ws_data.push(["Inputs:"]);
+            let inputRows = document.querySelectorAll('.input-table tbody tr');
+            processRows(inputRows);
+            // Process the results table.
+            ws_data.push(["Results:"]);
+            let resultRows = document.querySelectorAll('.table-striped tbody')[2].querySelectorAll('tr');
+            resultRows.forEach(row => {
+                let data = [];
+                row.querySelectorAll('td, th').forEach(cell => {
+                    data.push(cell.textContent.trim());
+                });
+                ws_data.push(data);
+            });
+            let ws = XLSX.utils.aoa_to_sheet(ws_data);
+            // Formatting
+            let range = XLSX.utils.decode_range(ws['!ref']); // get the range
+
+            for (let R = range.s.r; R <= range.e.r; ++R) {
+                for (let C = range.s.c; C <= range.e.c; ++C) {
+                    // This sets a border around every cell
+                    if (!ws[XLSX.utils.encode_cell({ r: R, c: C })]) continue; // if cell doesn't exist skip
+                    ws[XLSX.utils.encode_cell({ r: R, c: C })].s = {
+                        border: {
+                            top: { style: 'thin', color: { auto: 1 } },
+                            bottom: { style: 'thin', color: { auto: 1 } },
+                            left: { style: 'thin', color: { auto: 1 } },
+                            right: { style: 'thin', color: { auto: 1 } }
+                        },
+                        alignment: {
+                            vertical: 'center',
+                            horizontal: 'center'
+                        }
+                    };
+                }
+            }
+            // Bold and color headers
+            const headers = ['A1', 'A2', 'A3', 'A5']; // Adjusted based on your screenshot
+            headers.forEach(cell => {
+                if (ws[cell]) {
+                    ws[cell].s = {
+                        ...ws[cell].s, // spread to keep existing styles
+                        font: {
+                            bold: true
+                        },
+                        fill: {
+                            fgColor: { rgb: "FFFFAA00" } // change to your desired color
+                        },
+                        alignment: {
+                            vertical: 'center',
+                            horizontal: 'center'
+                        }
+                    }
+                }
+            });
+            // Adjust column widths and row heights
+            ws['!cols'] = [{ wch: 20 }, { wch: 15 }, { wch: 15 }, { wch: 15 }];
+            ws['!rows'] = Array(range.e.r).fill(null).map((_, i) => {
+                return { hpx: 25 }; // Set the
+
+            });
+            const boldHeaders = ['A1', 'A2', 'A3', 'A25'];  // Assuming the cells based on your screenshot
+            boldHeaders.forEach(cell => {
+                if (ws[cell]) {
+                    if (!ws[cell].s) ws[cell].s = {};  // Initialize the style object if it doesn't exist
+                    ws[cell].s.font = { bold: true };
+                }
+            });
+            const cellsWithBorder = ['A1:B1', 'A2:B2', 'A3:B3', 'A25:B25'];  // Example based on your screenshot
+            cellsWithBorder.forEach(range => {
+                let [start, end] = range.split(':');
+                let startCoord = XLSX.utils.decode_cell(start);
+                let endCoord = end ? XLSX.utils.decode_cell(end) : startCoord;
+
+                for (let R = startCoord.r; R <= endCoord.r; ++R) {
+                    for (let C = startCoord.c; C <= endCoord.c; ++C) {
+                        let cellAddress = XLSX.utils.encode_cell({ r: R, c: C });
+                        if (!ws[cellAddress]) continue;  // If cell doesn't exist, skip
+
+                        ws[cellAddress].s = {
+                            border: {
+                                top: { style: 'thin', color: { auto: 1 } },
+                                bottom: { style: 'thin', color: { auto: 1 } },
+                                left: { style: 'thin', color: { auto: 1 } },
+                                right: { style: 'thin', color: { auto: 1 } }
+                            }
+                        };
+                    }
+                }
+            });
+            // Ajoutez la feuille de travail à la classeur
+            XLSX.utils.book_append_sheet(wb, ws, ws_name);
+            // Générez un Blob et déclenchez un téléchargement
+            //XLSX.writeFile(wb, 'data.xlsx');
+
+            return wb; // Return the workbook
+        }
+        function s2ab(s) {
+            var buf = new ArrayBuffer(s.length);
+            var view = new Uint8Array(buf);
+            for (var i = 0; i < s.length; i++) {
+                view[i] = s.charCodeAt(i) & 0xFF;
+            }
+            return buf;
+        }
+
+
+        function sendExcelToServer(blob, projectTitle) {
+            const formData = new FormData();
+            formData.append('file', blob, 'data.xlsx');
+            formData.append('projectTitle', projectTitle); // Add this line
+            formData.append('date', date.value);
+
+
+
+            fetch('/store-excel', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Failed to store Excel data.");
+                    }
+                    console.log("Excel data stored successfully.");
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+
+
+
+
+        function openModal() {
+            document.getElementById('compositionModal').style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById('compositionModal').style.display = "none";
+        }
+        let isCustomComposition = false;
+        function handleCompositionChange() {
+            const choice = document.getElementById('compositionChoice').value;
+            if (choice === 'custom') {
+                openModal();
+                isCustomComposition = true; // This should be in the proper scope, and should be used when sending data to the server.
+            } else if (choice === 'default') {
+                isCustomComposition = false; // Use default values
+            }
+        }
+        let c1, c2, c3, ic4, nc4, ic5, nc5, nc6, nc7, nc8, nc9, nc10, nc11, nc12, nc13, nc14, nc15, nc16, nc17, nc18, nc19, nc20, nc21, nc22, nc23, nc24, nc25, nc26, nc27, nc28, nc29, nc30, benzene, toluene, oxylene, mxylene, m22propane, hydrosulfid, ox, nitrogene, ebenzene;
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById('closeButton').addEventListener('click', function (event) {
+                event.preventDefault();
+            });
+            document.getElementById('modalSubmitButton').addEventListener('click', function (e) {
+                e.preventDefault(); // prevent default form submission
+                console.log("Form submitted"); // Debug: Check if this log appears in the console when submitting the form
+
+                // Collect and Validate form data
+                c1 = parseFloat(document.getElementById('c1').value) || 0;
+                c2 = parseFloat(document.getElementById('c2').value) || 0;
+                c3 = parseFloat(document.getElementById('c3').value) || 0;
+                ic4 = parseFloat(document.getElementById('ic4').value) || 0;
+                nc4 = parseFloat(document.getElementById('nc4').value) || 0;
+                ic5 = parseFloat(document.getElementById('ic5').value) || 0;
+                nc5 = parseFloat(document.getElementById('nc5').value) || 0;
+                nc6 = parseFloat(document.getElementById('nc6').value) || 0;
+                nc7 = parseFloat(document.getElementById('nc7').value) || 0;
+                nc8 = parseFloat(document.getElementById('nc8').value) || 0;
+                nc9 = parseFloat(document.getElementById('nc9').value) || 0;
+                nc10 = parseFloat(document.getElementById('nc10').value) || 0;
+                nc11 = parseFloat(document.getElementById('nc11').value) || 0;
+                nc12 = parseFloat(document.getElementById('nc12').value) || 0;
+                nc13 = parseFloat(document.getElementById('nc13').value) || 0;
+                nc14 = parseFloat(document.getElementById('nc14').value) || 0;
+                nc15 = parseFloat(document.getElementById('nc15').value) || 0;
+                nc16 = parseFloat(document.getElementById('nc16').value) || 0;
+                nc17 = parseFloat(document.getElementById('nc17').value) || 0;
+                nc18 = parseFloat(document.getElementById('nc18').value) || 0;
+                nc19 = parseFloat(document.getElementById('nc19').value) || 0;
+                nc20 = parseFloat(document.getElementById('nc20').value) || 0;
+                nc21 = parseFloat(document.getElementById('nc21').value) || 0;
+                nc22 = parseFloat(document.getElementById('nc22').value) || 0;
+                nc23 = parseFloat(document.getElementById('nc23').value) || 0;
+                nc24 = parseFloat(document.getElementById('nc24').value) || 0;
+                nc25 = parseFloat(document.getElementById('nc25').value) || 0;
+                nc26 = parseFloat(document.getElementById('nc26').value) || 0;
+                nc27 = parseFloat(document.getElementById('nc27').value) || 0;
+                nc28 = parseFloat(document.getElementById('nc28').value) || 0;
+                nc29 = parseFloat(document.getElementById('nc29').value) || 0;
+                nc30 = parseFloat(document.getElementById('nc30').value) || 0;
+                benzene = parseFloat(document.getElementById('benzene').value) || 0;
+                toluene = parseFloat(document.getElementById('toluene').value) || 0;
+                oxylene = parseFloat(document.getElementById('oxylene').value) || 0;
+                mxylene = parseFloat(document.getElementById('mxylene').value) || 0;
+                m22propane = parseFloat(document.getElementById('m22propane').value) || 0;
+                hydrosulfid = parseFloat(document.getElementById('hydrosulfid').value) || 0;
+                ox = parseFloat(document.getElementById('ox').value) || 0;
+                nitrogene = parseFloat(document.getElementById('nitrogene').value) || 0;
+                ebenzene = parseFloat(document.getElementById('ebenzene').value) || 0;
+
+
+                // List of all your variables
+                const variables = [c1, c2, c3, ic4, nc4, ic5, nc5, nc6, nc7, nc8, nc9, nc10, nc11, nc12, nc13, nc14, nc15, nc16, nc17, nc18, nc19, nc20, nc21, nc22, nc23, nc24, nc25, nc26, nc27, nc28, nc29, nc30, benzene, toluene, oxylene, mxylene, m22propane, hydrosulfid, ox, nitrogene, ebenzene];
+
+                // List of all your variable names
+                const variableNames = ['Methane', 'Ethane', 'Propane', 'iButane', 'nButane', 'iPentane', 'nPentane', 'nHexane', 'nHeptane', 'nOctane', 'nNonane', 'nDecane', 'nC11', 'nC12', 'nC13', 'nC14', 'nC15', 'nC16', 'nC17', 'nC18', 'nC19', 'nC20', 'nC21', 'nC22', 'nC23', 'nC24', 'nC25', 'nC26', 'nC27', 'nC28', 'nC29', 'nC30', 'Benzene', 'Toluene', 'Oxylene', 'Mxylene', 'm22Propane', 'HydrogenSulfide', 'CO2', 'Nitrogene', 'eBenzene'];
+
+                // Validate each variable
+                for (let i = 0; i < variables.length; i++) {
+                    const value = variables[i];
+                    const name = variableNames[i];
+
+                    // If value is not a number or outside the range 0-100, set the error message.
+                    if (value !== null && (isNaN(value) || value < 0 || value > 100)) {
+                        document.getElementById('submissionMessage').textContent = `Invalid value for ${name}: ${value}`;
+                        return;
+                    }
+                }
+
+                document.getElementById('submissionMessage').textContent = 'Form Submitted Successfully!';
+                Hcalcul();
+                closeModal();
+            });
+        });
+
+        function Hcalcul() {
+            console.log("c1:", c1);
+            console.log("c2:", c2);
+
+            // Récupérer les valeurs du formulaire
+            let volumeflow = parseFloat(document.getElementById('volume').value);
+            let HHV = parseFloat(document.getElementById('HHV').value);
+            let carbondioxide = parseFloat(document.getElementById('carbonDioxide').value);
+            let methane = parseFloat(document.getElementById('methane').value);
+            let ethane = parseFloat(document.getElementById('ethane').value);
+            let propane = parseFloat(document.getElementById('propane').value);
+            let butane = parseFloat(document.getElementById('butane').value);
+            let pentane = parseFloat(document.getElementById('pentane').value);
+            let hexane = parseFloat(document.getElementById('hexane').value);
+            let heptane = parseFloat(document.getElementById('heptane').value);
+            let octane = parseFloat(document.getElementById('octane').value);
+            let hydrogensulfide = parseFloat(document.getElementById('hydrogensulfide').value);
+            let Temperature = parseFloat(document.getElementById('temperature').value);
+            let Pressure = parseFloat(document.getElementById('pressure').value);
+            let ExcessAir = parseFloat(document.getElementById('air').value);
+            let RelativeHumidity = parseFloat(document.getElementById('humidity').value);
+            let Nitrogen = parseFloat(document.getElementById('Nitro').value);
+            let LHV = parseFloat(document.getElementById('LHV').value);
+            let tair = parseFloat(document.getElementById('tair').value);
+            let tstack = parseFloat(document.getElementById('tstack').value);
+            let loss = parseFloat(document.getElementById('loss').value);
+            let projecttitle = document.getElementById('projecttitle').value;
+            let date = document.getElementById('date').value;
+            let tin = parseFloat(document.getElementById('tin').value);
+            let pcon = parseFloat(document.getElementById('pcon').value);
+            let v = parseFloat(document.getElementById('v').value);
+            const isCustomComposition = document.getElementById('compositionChoice').value === "custom";
+            fetch('/Hcalcul', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    isCustomComposition,
+                    c1,
+                    c2,
+                    c3,
+                    ic4,
+                    nc4,
+                    ic5,
+                    nc5,
+                    nc6,
+                    nc7,
+                    nc8,
+                    nc9,
+                    nc10,
+                    nc11,
+                    nc12,
+                    nc13,
+                    nc14,
+                    nc15,
+                    nc16,
+                    nc17,
+                    nc18,
+                    nc19,
+                    nc20,
+                    nc21,
+                    nc22,
+                    nc23,
+                    nc24,
+                    nc25,
+                    nc26,
+                    nc27,
+                    nc28,
+                    nc29,
+                    nc30,
+                    benzene,
+                    toluene,
+                    oxylene,
+                    mxylene,
+                    m22propane,
+                    hydrosulfid,
+                    ox,
+                    nitrogene,
+                    ebenzene,
+                    volumeflow, HHV, carbondioxide, methane, projecttitle, date, tin, v, pcon,
+                    ethane, propane, butane, pentane,
+                    hexane, heptane, octane, hydrogensulfide, Temperature, Pressure, ExcessAir, RelativeHumidity, Nitrogen, LHV, tair, tstack, loss
+                })
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Erreur réseau lors de la demande.");
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    //console.log(data);
+
+                    // Afficher les résultats
+                    document.querySelectorAll('.table-striped tbody')[2].querySelectorAll('tr')[1].querySelectorAll('td')[3].textContent = data.AirflowrateKmol.toExponential(5);
+                    document.querySelectorAll('.table-striped tbody')[2].querySelectorAll('tr')[3].querySelectorAll('td')[3].textContent = data.fuelflowrateKmol.toExponential(5);
+                    document.querySelectorAll('.table-striped tbody')[2].querySelectorAll('tr')[4].querySelectorAll('td')[3].textContent = data.ncv.toExponential(5);
+                    document.querySelectorAll('.table-striped tbody')[2].querySelectorAll('tr')[6].querySelectorAll('td')[3].textContent = data.flowrategases.toExponential(5);
+                    document.querySelectorAll('.table-striped tbody')[2].querySelectorAll('tr')[8].querySelectorAll('td')[3].textContent = data.Qv.toExponential(5);
+                    document.querySelectorAll('.table-striped tbody')[2].querySelectorAll('tr')[9].querySelectorAll('td')[3].textContent = data.Qs.toExponential(5);
+                    document.querySelectorAll('.table-striped tbody')[2].querySelectorAll('tr')[10].querySelectorAll('td')[3].textContent = data.Qair.toExponential(5);
+                    document.querySelectorAll('.table-striped tbody')[2].querySelectorAll('tr')[11].querySelectorAll('td')[3].textContent = data.Qstack.toExponential(5);
+                    document.querySelectorAll('.table-striped tbody')[2].querySelectorAll('tr')[12].querySelectorAll('td')[3].textContent = data.Ql.toExponential(5);
+                    document.querySelectorAll('.table-striped tbody')[2].querySelectorAll('tr')[13].querySelectorAll('td')[3].textContent = data.Qout.toExponential(5);
+                    document.querySelectorAll('.table-striped tbody')[2].querySelectorAll('tr')[14].querySelectorAll('td')[3].textContent = data.Qu.toExponential(5);
+                    document.querySelectorAll('.table-striped tbody')[2].querySelectorAll('tr')[15].querySelectorAll('td')[3].textContent = data.E.toFixed(2);
+
+                    // Update the circle based on the new efficiency value
+                    setCirclePercentage();
+
+                    document.querySelectorAll('.table-striped tbody')[2].querySelectorAll('tr')[16].querySelectorAll('td')[3].textContent = data.tout.toFixed(2);
+                    const wb = generateExcelData();
+                    const binaryString = XLSX.write(wb, { bookType: 'xlsx', type: 'binary' });
+                    const blob = new Blob([s2ab(binaryString)], { type: 'application/octet-stream' });
+                    sendExcelToServer(blob, projecttitle, date);
+
+
+                })
+
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Une erreur est survenue lors du calcul.');
+                    const token = localStorage.getItem('token');
+
+                });
+        }
+        document.getElementById('exportToExcel').addEventListener('click', function () {
+            const wb = generateExcelData();
+            exportExcelData(wb);
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>
